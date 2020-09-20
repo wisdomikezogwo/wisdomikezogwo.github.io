@@ -1,0 +1,15 @@
+Research Interest Statement
+
+My research interest lies in developing state-of-the-art machine learning techniques for medical image analysis with a special focus on tackling challenges on clinical deployment such as distributional shift and explainability, enabling robustness and trust of deployed models.
+
+While I was an undergraduate, I worked on numerous projects which cut across: control engineering, robotics, embedded systems, signal processing, dimensionality reduction, domain generalization/adaptation, and machine learning.
+
+During the course of my final year project which was supervised by  Dr. K.P. Ayodele, I was introduced to Medical Image Analysis or in our case at the time, electrophysiological data analysis: Combining disparate EEG data  with the aim of increasing trainable dataset size and consequently improving deep learning based epilepsy detectors and classifiers. We achieved results comparable with previous large-scale validation studies, we showed that if the distributional shift between disparate datasets can be minimized, they may be combined to increase the training dataset size available for automatic seizure detectors  [1]. In addition, my exposure to computational neuroscience led to my successful application for the IBRO-SIMONS Computational Neuroscience Summer School in South Africa, early this year.
+
+At the summer school, I found topics with a link between computational neuroscience and artificial intelligence interesting; some of which include biological attention mechanism, dendritic computation, and reinforcement learning. 
+
+I believe we can further the field of medical imaging analysis by promoting the robust and ethical use of machine learning methods. This work serves to improve our current understanding of complex artificial intelligence models in medical imaging analysis and provide crucial guidance to the clinical use of these technologies. 
+
+
+[1] Ayodele, K. P., W. O. Ikezogwo, M. A. Komolafe, and Philip Ogunbona. 2020. “Supervised Domain Generalization for Integration of Disparate Scalp EEG Datasets for Automatic Epileptic Seizure Detection.” Computers in Biology and Medicine 120: 103757.
+
