@@ -129,3 +129,44 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+/* ... (Other CSS styles) ... */
+
+#news-updates {
+  border-top: 2px solid #e0e0e0;
+  padding-top: 20px;
+  margin-top: 20px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.update {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff; 
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+}
+
+.update p {
+  color: #666;
+  margin-top: 5px;
+}
+
+/* ... (Other CSS styles) ... */
+
+.update h3 {
+  color: #333;
+  margin: 0;
+  display: flex; /* using flexbox to align the title and date */
+  justify-content: space-between; /* pushes the date to the far right */
+  align-items: center; /* vertically center the date and title */
+}
+
+.date {
+  color: #888;
+  margin-left: 20px; /* some space between the title and date */
+  flex-shrink: 0; /* ensure the date doesn't shrink and become hidden */
+}
+
+/* ... (Other CSS styles) ... */

@@ -13,6 +13,48 @@
 
   <title>Wisdom O. Ikezogwo</title>
   
+  <script>
+    function toggleDropdown() {
+        const container = document.querySelector('.dropdown-container');
+        container.classList.toggle('active');
+    }
+  </script>
+  
+  <style>
+    /* Base styles for the container */
+    .dropdown-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px; /* or any desired max-width */
+        margin: 20px auto;
+    }
+
+    /* The hidden content */
+    .dropdown-content {
+        display: none;
+        width: 100%;
+        border-top: 1px solid #aaa;
+    }
+
+    /* The button with a downward arrow */
+    .dropdown-button {
+        display: inline-block;
+        background-color: transparent;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Display content when container is active */
+    .dropdown-container.active .dropdown-content {
+        display: block;
+    }
+  </style>
+
   <meta name="author" content="Jon Barron">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
@@ -39,7 +81,7 @@
                 <a href="https://www.linkedin.com/in/wisdom-o-i/">LinkedIn</a>&nbsp
               </p>
 
-              <p>I am a 2nd year PhD student at <a href="https:/https://grail.cs.washington.edu/">Graphics and Imaging Laboratory</a> at the <a href="https://www.cs.washington.edu/">Paul G. Allen School for Computer Science & Engineering</a>, where I work with <a href="https://scholar.google.com/citations?user=nBwaXUsAAAAJ&hl=en">Professor Linda Shapiro</a>.
+              <p>I am a 3nd year PhD student at <a href="https:/https://grail.cs.washington.edu/">Graphics and Imaging Laboratory</a> at the <a href="https://www.cs.washington.edu/">Paul G. Allen School for Computer Science & Engineering</a>, where I work with <a href="https://scholar.google.com/citations?user=nBwaXUsAAAAJ&hl=en">Professor Linda Shapiro</a>.
               </p>
               <p>Working on machine learning for medical image analysis, with a focus on tackling open problems on clinical development and deployement of models.</p>
 
@@ -63,6 +105,54 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/quilt1m.png" alt="clean-usnob" width="160" height="160">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/pdf/2209.01534">
+                <papertitle>Quilt-1M: One Million Image-Text Pairs for Histopathology.</papertitle>
+              </a>
+              <br>
+              <strong>Wisdom O. Ikezogwo</strong>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Seyfioglu%2C+M+S">
+                 Mehmet Saygin Seyfioglu</a>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Shapiro%2C+L">
+                Fatemeh Ghezloo, Dylan Geva, Fatwir S. Mohammed, Pavan K. Anand, Ranjay Krishna and Linda Shapiro</a>
+              <br>
+              <em>PrePrint</em> June 2023.
+                <details>
+                  <summary>Recent accelerations in multi-modal applications have been made possible with the plethora of image and text data available online. However, the scarcity of similar data in the medical field, specifically in histopathology, has slowed similar progress. To enable similar representation learning 
+                    for histopathology, we turn to YouTube, an untapped resource of videos, offering 1,087 hours of valuable educational histopathology videos from expert clinicians. From YouTube, we curate Quilt: a large-scale vision-language dataset consisting of 802,148 image and text pairs.
+                  </summary>
+                  <p>
+                    Quilt was automatically
+                     curated using a mixture of models, including large language models, handcrafted algorithms, human knowledge databases, and automatic speech recognition. In comparison, the most comprehensive datasets curated for histopathology amass only around 200K samples. We combine Quilt with datasets, 
+                     from other sources, including Twitter, research papers, and the internet in general, to create an even larger dataset: Quilt-1M, with 1M paired image-text samples, marking it as the largest vision-language histopathology dataset to date. We demonstrate the value of Quilt-1M by fine-tuning a 
+                     pre-trained CLIP model. Our model outperforms state-of-the-art models on both zero-shot and linear probing tasks for classifying new pathology images across 13 diverse patch-level datasets of 8 different sub-pathologies and cross-modal retrieval tasks.
+                    
+                  </p>
+                </details>
+
+            </td>
+          </tr>
+
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/multiscale_.png" alt="clean-usnob" width="160" height="160">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/pdf/2209.01534">
+                <papertitle>Multi-Scale Cross-Attention Multiple Instance Learning Network for
+                  Risk Stratification of Whole Slide Images.</papertitle>
+              </a>
+              <br>
+              <strong>Wisdom O. Ikezogwo</strong>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Seyfioglu%2C+M+S">
+                Christopher Chandler, Jatin S. Gandhi, Annie Garcia, Courtney Daum,
+                Elizabeth Loggers, Linda G. Shapiro, Jose G. Mantilla, Anshu Bandhlish, Robert W. Ricciotti</a>
+              <br>
+              <em>Abstract (Oral Platform Presentation)*, United States and Canadian Academy of Pathology (USCAP)</em> April 2023.
+            </td>
+          </tr>
+
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="images/mmae2.png" alt="clean-usnob" width="160" height="160">
@@ -110,6 +200,27 @@
           </tr>
 
         </tbody></table>
+    
+        
+    <!-- News/Updates Section -->
+    <section id="news-updates">
+      <h2>News & Updates</h2>
+      
+      <!-- Update 1 -->
+      <article class="update">
+          <h3>Started Summer Internship at Mayo Clinic (QHS team)  <span class="date">June, 2023</span></h3>
+          <p><a href="https://www.mayo.edu/research/departments-divisions/quantitative-health-sciences/overview" target="_blank">Read here</a>.</p>
+      </article>
+  
+      <!-- Update 2 -->
+      <article class="update">
+          <h3>Presenting MMAE and Junior Chair at ML4H <span class="date">November, 2022</span></h3>
+          <p><a href="https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf" target="_blank">Details</a>.</p>
+      </article>
+  
+      <!-- ... Add more updates as needed ... -->
+  
+  </section>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
@@ -124,7 +235,8 @@
               <img src="images/agarwal-circle-cropped.png" alt="cs188" width="160" height="160">
             </td>
             <td width="75%" valign="center">
-              <a href="https://courses.cs.washington.edu/courses/cse160/">{TA} CSE 160: Data Programming, Fall 2021 & Winter 2022.</a>
+              <a href="https://courses.cs.washington.edu/courses/cse473/23sp/">{TA} CSE 473:  Introduction to Artificial Intelligence, Spring 2023.</a>
+              <p></p><a href="https://courses.cs.washington.edu/courses/cse160/">{TA} CSE 160: Data Programming, Fall 2021 & Winter 2022.</a>
               <p> <a href="http://eee.oauife.edu.ng">{TA} EEE 203/201: Fundamentals of Electronic & Electrical Engr, First Semester 2019.</a> </p>
 
               <br>
