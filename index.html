@@ -81,7 +81,7 @@
                 <a href="https://www.linkedin.com/in/wisdom-o-i/">LinkedIn</a>&nbsp
               </p>
 
-              <p>I am a 3rd year PhD student at <a href="https:/https://grail.cs.washington.edu/">Graphics and Imaging Laboratory</a> at the <a href="https://www.cs.washington.edu/">Paul G. Allen School for Computer Science & Engineering</a>, where I work with <a href="https://scholar.google.com/citations?user=nBwaXUsAAAAJ&hl=en">Professor Linda Shapiro</a> and Ranjay Krishna.
+              <p>I am a 3rd year PhD student at <a href="https:/https://grail.cs.washington.edu/">Graphics and Imaging Laboratory</a> at the <a href="https://www.cs.washington.edu/">Paul G. Allen School for Computer Science & Engineering</a>, where I work with <a href="https://scholar.google.com/citations?user=nBwaXUsAAAAJ&hl=en">Professor Linda Shapiro</a> and <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a>.
               </p>
               <p>Working on machine learning for Medical Multimodal Understanding (MMU), with a focus on tackling open problems on clinical development and deployement of models.</p>
 
@@ -97,7 +97,8 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                My research interest lies in developing state-of-the-art machine learning techniques for Medical Multimodal Understanding (MMU) with a special focus on tackling challenges of clinical deployment of ml models such as distributional shift, and explainability, enabling robustness and trust of these deployed models.
+                My research interest lies in developing state-of-the-art machine learning techniques for Medical Multimodal Understanding (MMU)
+                 with a special focus on tackling challenges of clinical deployment of ml models such as distributional shift, and explainability, enabling robustness and trust of these deployed models.
 
               </p>
             </td>
@@ -105,6 +106,36 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/quiltllama_fav.png" alt="clean-usnob" width="160" height="160">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2306.11207">
+                <papertitle>Quilt-LLaVA: Visual Instruction Tuning by Extracting Localized Narratives from Open-Source Histopathology Videos</papertitle>
+              </a>
+              <br>
+              <a href="https://wisdomikezogwo.github.io/"> <strong>Wisdom O. Ikezogwo</strong> </a>,
+              <a href="https://mehmetsayginseyfioglu.github.io/"> Mehmet Saygin Seyfioglu</a>,
+              <a href="https://fghezloo.github.io/"> Fatemeh Ghezloo </a>, 
+              <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a> and
+              <a href="https://homes.cs.washington.edu/~shapiro/">  Linda Shapiro </a>
+              <br>
+
+              <em>Preprint</em> December 2023.
+                <details>
+                  <summary>Challenges in histopathology: 1) Lack of spatial grounding in image-language datasets; 2) Isolated image-text pairs from PubMed. Solution: Using YouTube content to create a visual instruction tuning dataset. Extracting mouse cursor movements for spatial awareness. Joint training of vision and text encoders yields a superior visual chatbot, surpassing state-of-the-art on histopathology benchmarks.
+                  </summary>
+                  <p>
+                    The gigapixel scale of whole slide images (WSIs) poses a challenge for histopathology multi-modal chatbots, requiring a global WSI analysis for diagnosis, compounding evidence from different WSI patches. Current visual instruction datasets, generated through large language models, focus on creating question/answer pairs for individual image patches, which may lack diagnostic capacity on their own in histopathology, further complicated by the absence of spatial grounding in histopathology image captions.
+                    To bridge this gap, we introduce Quilt-Instruct, a large-scale dataset of 107,131 histopathology-specific instruction question/answer pairs, that is collected by leveraging educational histopathology videos from YouTube, which provides spatial localization of captions by automatically extracting narrators' cursor movements. In addition, we provide contextual reasoning by extracting diagnosis and supporting facts from the entire video content to guide the extrapolative reasoning of GPT-4. Using Quilt-Instruct, we train Quilt-LLaVA, which can reason beyond the given single image patch, enabling diagnostic reasoning and the capability of spatial awareness. To evaluate Quilt-LLaVA, we propose a comprehensive evaluation dataset created from 985 images and 1283 human-generated question-answers directly extracted from videos. We also thoroughly evaluate Quilt-LLaVA using public histopathology datasets, where Quilt-LLaVA significantly outperforms SOTA by over 10% on relative GPT-4 score and 4% and 9% on open and closed set VQA.
+                  </p>
+                </details>
+
+            </td>
+          </tr>
+
+
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="images/quilt1m.png" alt="clean-usnob" width="160" height="160">
