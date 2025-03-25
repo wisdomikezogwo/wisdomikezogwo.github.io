@@ -1,0 +1,157 @@
+<!-- ... existing code ... -->
+
+<style>
+  /* Base styles for the container */
+  .dropdown-container {
+      position: relative;
+      width: 100%;
+      max-width: 600px; /* or any desired max-width */
+      margin: 20px auto;
+  }
+
+  /* The hidden content */
+  .dropdown-content {
+      display: none;
+      width: 100%;
+      border-top: 1px solid #aaa;
+  }
+
+  /* The button with a downward arrow */
+  .dropdown-button {
+      display: inline-block;
+      background-color: transparent;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+
+  /* Display content when container is active */
+  .dropdown-container.active .dropdown-content {
+      display: block;
+  }
+      
+  /* Icon styles */
+  .icon-link {
+    font-size: 18px;
+    margin: 0 8px;
+    color: #1772d0;
+    text-decoration: none;
+  }
+  
+  .icon-link:hover {
+    color: #f09228;
+  }
+  
+  /* Clickable news cards */
+  .update {
+    margin-bottom: 8px !important;
+    padding: 6px !important;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    position: relative;
+  }
+  
+  .update:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+  }
+  
+  .update h3 {
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-right: 70px; /* Make room for date */
+    color: #333;
+  }
+  
+  .date {
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    right: 8px;
+    top: 6px;
+  }
+  
+  /* Hide the read more link visually but keep it accessible */
+  .update p {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  /* Make the entire card clickable */
+  .update-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+</style>
+
+<!-- ... existing code ... -->
+
+<!-- News/Updates Section -->
+<section id="news-updates">
+<h2>News & Updates</h2>
+
+  <!-- Update 1 -->
+  <article class="update">
+    <a href="https://arxiv.org/abs/2312.04746" target="_blank" class="update-link" aria-label="Read more about Quilt-LLaVA"></a>
+    <h3>Quilt-LLaVA has been accepted at CVPR 2024</h3>
+    <span class="date">February, 2024</span>
+    <p><a href="https://arxiv.org/abs/2312.04746" target="_blank">Read here</a></p>
+  </article>
+
+  <!-- Update 2 -->
+  <article class="update">
+    <a href="https://www.apple.com" target="_blank" class="update-link" aria-label="Read more about Apple internship"></a>
+    <h3>Interning at Apple in Spring & Summer of 2024</h3>
+    <span class="date">January, 2024</span>
+    <p><a href="https://www.apple.com" target="_blank">Read here</a></p>
+  </article>
+
+ <!-- Update 3 -->
+ <article class="update">
+  <a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/phase-ii/#:~:text=Medical%20AI%20Renaissance%3A%20A%20Trio%20of%20Medical%20Projects%20from%20Data%20Curation%20to%20Multi%2DModal%20Chatbot%20Training%20to%20Evaluation%0AUniversity%20Of%20Washington%2C%20Linda%20Shapiro" target="_blank" class="update-link" aria-label="Read more about Microsoft grant"></a>
+  <h3>Medical AI Renaissance Proposal Accepted for Microsoft's Accelerating Foundation Model Research Grant</h3>
+  <span class="date">October, 2023</span>
+  <p><a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/phase-ii/#:~:text=Medical%20AI%20Renaissance%3A%20A%20Trio%20of%20Medical%20Projects%20from%20Data%20Curation%20to%20Multi%2DModal%20Chatbot%20Training%20to%20Evaluation%0AUniversity%20Of%20Washington%2C%20Linda%20Shapiro" target="_blank">Read here</a></p>
+</article>
+
+<!-- Update 4 -->
+<article class="update">
+  <a href="https://neurips.cc/virtual/2023/poster/73608" target="_blank" class="update-link" aria-label="Read more about Quilt-1M"></a>
+  <h3>Quilt-1M has been accepted at NeurIPS 2023 (ORAL)</h3>
+  <span class="date">September, 2023</span>
+  <p><a href="https://neurips.cc/virtual/2023/poster/73608" target="_blank">Read here</a></p>
+</article>
+
+<!-- Update 5 -->
+<article class="update">
+  <a href="https://www.mayo.edu/research/departments-divisions/quantitative-health-sciences/overview" target="_blank" class="update-link" aria-label="Read more about Mayo Clinic internship"></a>
+  <h3>Started Summer Internship at Mayo Clinic (QHS team)</h3>
+  <span class="date">June, 2023</span>
+  <p><a href="https://www.mayo.edu/research/departments-divisions/quantitative-health-sciences/overview" target="_blank">Read here</a></p>
+</article>
+
+<!-- Update 6 -->
+<article class="update">
+  <a href="https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf" target="_blank" class="update-link" aria-label="Read more about MMAE presentation"></a>
+  <h3>Presenting MMAE and Junior Chair at ML4H</h3>
+  <span class="date">November, 2022</span>
+  <p><a href="https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf" target="_blank">Details</a></p>
+</article>
+
+<!-- ... Add more updates as needed ... -->
+
+</section>
+
+<!-- ... rest of your existing code ... -->

@@ -53,13 +53,76 @@
     .dropdown-container.active .dropdown-content {
         display: block;
     }
-  </style>
+        
+    /* Icon styles */
+    .icon-link {
+      font-size: 18px;
+      margin: 0 8px;
+      color: #1772d0;
+      text-decoration: none;
+    }
+    
+    .icon-link:hover {
+      color: #f09228;
+    }
+    
+  /* Clickable news cards */
+  .update {
+    margin-bottom: 8px !important;
+    padding: 6px !important;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    position: relative;
+  }
+  
+  .update:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-1px);
+  }
+  
+  .update h3 {
+    font-size: 14px;
+    margin-bottom: 0;
+    padding-right: 70px; /* Make room for date */
+    color: #333;
+  }
+  
+  .date {
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    right: 8px;
+    top: 6px;
+  }
+  
+  /* Hide the read more link visually but keep it accessible */
+  .update p {
+    height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  /* Make the entire card clickable */
+  .update-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+</style>
 
-  <meta name="author" content="Jon Barron">
+  <meta name="author" content="Wisdom O. Ikezogwo">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
   <link rel="icon" type="image/png" href="images/seal_icon.png">
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -74,16 +137,18 @@
               </p>
 
               <p style="text-align:center">
-                <a href="mailto:wisdomik@cs.washington.edu">Email</a> &nbsp|&nbsp
-                <a href="data/wisdom_academic_cv_latest.pdf">CV</a> &nbsp|&nbsp
-                <a href="https://scholar.google.com/citations?user=gt5I_iYAAAAJ&hl=en">Google Scholar</a> &nbsp|&nbsp
-                <a href="https://github.com/wisdomikezogwo">GitHub</a>&nbsp|&nbsp
-                <a href="https://www.linkedin.com/in/wisdom-o-i/">LinkedIn</a>&nbsp
+                <a href="mailto:wisdomik@cs.washington.edu" class="icon-link"><i class="fas fa-envelope" title="Email"></i></a>
+                <a href="data/wisdom_academic_cv_latest.pdf" class="icon-link"><i class="fas fa-file-alt" title="CV"></i></a>
+                <a href="https://scholar.google.com/citations?user=gt5I_iYAAAAJ&hl=en" class="icon-link"><i class="fas fa-graduation-cap" title="Google Scholar"></i></a>
+                <a href="https://github.com/wisdomikezogwo" class="icon-link"><i class="fab fa-github" title="GitHub"></i></a>
+                <a href="https://www.linkedin.com/in/wisdom-o-i/" class="icon-link"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
               </p>
 
-              <p>I am a 3rd year PhD student at <a href="https:/https://grail.cs.washington.edu/">Graphics and Imaging Laboratory</a> at the <a href="https://www.cs.washington.edu/">Paul G. Allen School for Computer Science & Engineering</a>, where I work with <a href="https://scholar.google.com/citations?user=nBwaXUsAAAAJ&hl=en">Professor Linda Shapiro</a> and <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a>.
+              <p>I am a 4th year PhD student in 
+                 <a href="https://www.cs.washington.edu/"> Computer Science & Engineering at University of Washington</a>,
+                  where I work with Prof. <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a> and <a href="https://scholar.google.com/citations?user=nBwaXUsAAAAJ&hl=en">Linda Shapiro</a> 
+                  . Previously, I received my B.Sc. from Obafemi Awolowo University, Nigeria, where I was fortunate to work with Prof.<a href="https://scholar.google.com/citations?user=aYIMS9gAAAAJ&hl=en"> Kayode P. Ayodele</a>.
               </p>
-              <p>Working on machine learning for Medical Multimodal Understanding (MMU), with a focus on tackling open problems on clinical development and deployement of models.</p>
 
               
             </td>
@@ -97,8 +162,21 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Research</heading>
               <p>
-                My research interest lies in developing state-of-the-art machine learning techniques for Medical Multimodal Understanding (MMU)
+                <!-- My research interest lies in developing state-of-the-art machine learning techniques for Medical Multimodal Understanding (MMU)
                  with a special focus on tackling challenges of clinical deployment of ml models such as distributional shift, and explainability, enabling robustness and trust of these deployed models.
+                -->
+                My research aims to advance multimodal representation and generative modeling through effective alignment strategies. On the data side, I study:
+                <ul>
+                  <li>Large-scale data curation methods to connect various co-occurring or connected modalities (e.g., vision and language) across domains, creating multimodal datasets that enable large-scale training without expensive annotation.</li>
+                  <li>Benchmarking models.</li>
+                </ul>
+                On the model side, I focus on:
+                <ul>
+                  <li>Multimodal reasoning, developing multi-agent frameworks and foundation models aligned to human experts.</li>
+                  <li>Improving image/video generative models through alignment to expected behavior, specifically with an interest in physics-informed approaches that improve temporal consistency and physical plausibility.</li>
+                </ul>
+
+
 
               </p>
             </td>
@@ -108,7 +186,69 @@
           
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/quiltllama_fav.png" alt="clean-usnob" width="160" height="160">
+              <img src="images/pathfinder.gif" alt="clean-usnob" width="160" height="160">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2501.04184">
+                <papertitle>PathFinder: A Multi-Modal Multi-Agent System for Medical Diagnostic Decision-Making Applied to Histopathology</papertitle>
+              </a>
+              <br>
+              <a href="https://wisdomikezogwo.github.io/"> <strong>Wisdom O. Ikezogwo</strong> </a>,
+              <a href="https://fghezloo.github.io/"> Fatemeh Ghezloo </a>,
+              <a href="https://mehmetsayginseyfioglu.github.io/"> Mehmet Saygin Seyfioglu</a>,
+              <a href="https://github.com/RustinS"> Rustin Soraki</a>,
+              <a href="https://www.beibinli.com/"> Beibin Li</a>,
+              <a href=""> Tejoram Vivekanandan</a>,
+              <a href="https://www.uclahealth.org/providers/joann-elmore"> Joann G. Elmore</a>,
+              <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a> and
+              <a href="https://homes.cs.washington.edu/~shapiro/">  Linda Shapiro </a>
+              <br>
+
+              <em>PrePrint </em> 2025.
+                <details>
+                  <summary>PathFinder: A four-agent AI system for histopathology that outperforms both SOTA methods (+8%) and human pathologists (+9%) in melanoma diagnosis while providing explainable results through expert-like image navigation and description.
+                  </summary>
+                  <p>
+                    Diagnosing diseases through histopathology whole slide images (WSIs) is fundamental in modern pathology but is challenged by the gigapixel scale and complexity of WSIs. PathFinder is a multi-modal, multi-agent framework that emulates the decision-making process of expert pathologists by integrating four AI agents: Triage, Navigation, Description, and Diagnosis. The Triage Agent distinguishes benign versus risky WSIs, then the Navigation and Description Agents collaboratively identify significant regions, provide importance maps, and generate natural language descriptions of relevant patches. Finally, the Diagnosis Agent synthesizes these findings into a comprehensive diagnosis. PathFinder outperforms state-of-the-art methods in skin melanoma diagnosis by 8% while offering inherent explainability, with pathologist evaluations finding that the descriptions it generates are on par with GPT-4. Remarkably, PathFinder is also the first AI system to surpass the average performance of pathologists on this task by 9%, setting a new standard for accurate and interpretable AI-assisted diagnostics in pathology.
+                  </p>
+                </details>
+
+            </td>
+          </tr>
+          
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/mednarratives.gif" alt="clean-usnob" width="160" height="160">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2501.04184">
+                <papertitle>MedicalNarratives: Connecting Medical Vision and Language with Localized Narratives</papertitle>
+              </a>
+              <br>
+              <a href="https://wisdomikezogwo.github.io/"> <strong>Wisdom O. Ikezogwo</strong> </a>,
+              <a href="https://www.linkedin.com/in/kevin-zhang-275661290/"> Kevin Zhang</a>,
+              <a href="https://mehmetsayginseyfioglu.github.io/"> Mehmet Saygin Seyfioglu</a>,
+              <a href="https://fghezloo.github.io/"> Fatemeh Ghezloo </a>, 
+              <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a> and
+              <a href="https://homes.cs.washington.edu/~shapiro/">  Linda Shapiro </a>
+              <br>
+
+              <em>PrePrint </em> 2025.
+                <details>
+                  <summary>MedicalNarratives: A dataset of 4.7M image-text pairs from medical videos that aligns speech with mouse movements. Trained GenMedCLIP model achieves SOTA across 12 medical domains.
+                  </summary>
+                  <p>
+                    We propose MedicalNarratives, a dataset curated from medical pedagogical videos, inspired by Localized Narratives. It synchronizes instructors’ speech and mouse movements to create multimodal data for both semantic and dense objectives in medical AI tasks. MedicalNarratives contains 4.7M image-text pairs, with 1M having trace-level or bounding-box-level annotations. Trained with these data, our GenMedCLIP achieves state-of-the-art performance on medical imaging benchmarks spanning 12 domains, enabling integrated semantic and dense objectives without relying on separately trained models.
+                  </p>
+                </details>
+
+            </td>
+          </tr>
+
+          
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/quiltllava.gif" alt="clean-usnob" width="160" height="160">
             </td>
             <td width="75%" valign="middle">
               <a href="https://arxiv.org/abs/2312.04746">
@@ -135,7 +275,7 @@
             </td>
           </tr>
 
-
+          
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
               <img src="images/quilt1m.png" alt="clean-usnob" width="160" height="160">
@@ -238,40 +378,66 @@
       <h2>News & Updates</h2>
 
         <!-- Update 1 -->
-        <article class="update">
-          <h3>Quilt-LLaVA has been accepted at CVPR 2024 <span class="date">Febuary, 2024</span></h3>
-          <p><a href="https://arxiv.org/abs/2312.04746" target="_blank">Read here</a>.</p>
-        </article>
+        <section id="news-updates">
+          <h2>News & Updates</h2>
 
-        <!-- Update 1 -->
-        <article class="update">
-          <h3>Interning at Apple in Spring & Summer of 2024 <span class="date">January, 2024</span></h3>
-          <p><a href="https://arxiv.org/abs/2312.04746" target="_blank">Read here</a>.</p>
-        </article>
-
-       <!-- Update 1 -->
-       <article class="update">
-        <h3> Medical AI Renaissance Proposal Accepted for Microsoft's Accelerating Foundation Model Research Grant. <span class="date">October, 2023</span></h3>
-        <p><a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/phase-ii/#:~:text=Medical%20AI%20Renaissance%3A%20A%20Trio%20of%20Medical%20Projects%20from%20Data%20Curation%20to%20Multi%2DModal%20Chatbot%20Training%20to%20Evaluation%0AUniversity%20Of%20Washington%2C%20Linda%20Shapiro" target="_blank">Read here</a>.</p>
-      </article>
-
-      <!-- Update 1 -->
-      <article class="update">
-        <h3>Quilt-1M has been accepted at NeurIPS 2023 (ORAL)  <span class="date">September, 2023</span></h3>
-        <p><a href="https://neurips.cc/virtual/2023/poster/73608" target="_blank">Read here</a>.</p>
-      </article>
-
-      <!-- Update 1 -->
-      <article class="update">
-          <h3>Started Summer Internship at Mayo Clinic (QHS team)  <span class="date">June, 2023</span></h3>
-          <p><a href="https://www.mayo.edu/research/departments-divisions/quantitative-health-sciences/overview" target="_blank">Read here</a>.</p>
-      </article>
-  
-      <!-- Update 2 -->
-      <article class="update">
-          <h3>Presenting MMAE and Junior Chair at ML4H <span class="date">November, 2022</span></h3>
-          <p><a href="https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf" target="_blank">Details</a>.</p>
-      </article>
+          
+          
+            <!-- Update 1 -->
+            <article class="update">
+              <a href="https://www.washington.edu/populationhealth/2024/06/18/initiative-announces-awardees-of-ai-focused-population-health-pilot-projects/" target="_blank" class="update-link" aria-label="Read more about Quilt-LLaVA"></a>
+              <h3> UW Population Health Initiative — AI Pilot Research Grant Award</h3>
+              <span class="date">2024</span>
+              <p><a href="https://www.washington.edu/populationhealth/2024/06/18/initiative-announces-awardees-of-ai-focused-population-health-pilot-projects/" target="_blank">Read here</a></p>
+            </article>
+          
+            <!-- Update 1 -->
+            <article class="update">
+              <a href="https://arxiv.org/abs/2312.04746" target="_blank" class="update-link" aria-label="Read more about Quilt-LLaVA"></a>
+              <h3>Quilt-LLaVA has been accepted at CVPR 2024</h3>
+              <span class="date">February, 2024</span>
+              <p><a href="https://arxiv.org/abs/2312.04746" target="_blank">Read here</a></p>
+            </article>
+          
+            <!-- Update 2 -->
+            <article class="update">
+              <a href="https://www.apple.com" target="_blank" class="update-link" aria-label="Read more about Apple internship"></a>
+              <h3>Interning at Apple in Spring & Summer of 2024</h3>
+              <span class="date">January, 2024</span>
+              <p><a href="https://www.apple.com" target="_blank">Read here</a></p>
+            </article>
+          
+           <!-- Update 3 -->
+           <article class="update">
+            <a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/phase-ii/#:~:text=Medical%20AI%20Renaissance%3A%20A%20Trio%20of%20Medical%20Projects%20from%20Data%20Curation%20to%20Multi%2DModal%20Chatbot%20Training%20to%20Evaluation%0AUniversity%20Of%20Washington%2C%20Linda%20Shapiro" target="_blank" class="update-link" aria-label="Read more about Microsoft grant"></a>
+            <h3>Medical AI Renaissance Proposal Accepted for Microsoft's Accelerating Foundation Model Research Grant</h3>
+            <span class="date">October, 2023</span>
+            <p><a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/phase-ii/#:~:text=Medical%20AI%20Renaissance%3A%20A%20Trio%20of%20Medical%20Projects%20from%20Data%20Curation%20to%20Multi%2DModal%20Chatbot%20Training%20to%20Evaluation%0AUniversity%20Of%20Washington%2C%20Linda%20Shapiro" target="_blank">Read here</a></p>
+          </article>
+          
+          <!-- Update 4 -->
+          <article class="update">
+            <a href="https://neurips.cc/virtual/2023/poster/73608" target="_blank" class="update-link" aria-label="Read more about Quilt-1M"></a>
+            <h3>Quilt-1M has been accepted at NeurIPS 2023 (ORAL)</h3>
+            <span class="date">September, 2023</span>
+            <p><a href="https://neurips.cc/virtual/2023/poster/73608" target="_blank">Read here</a></p>
+          </article>
+          
+          <!-- Update 5 -->
+          <article class="update">
+            <a href="https://www.mayo.edu/research/departments-divisions/quantitative-health-sciences/overview" target="_blank" class="update-link" aria-label="Read more about Mayo Clinic internship"></a>
+            <h3>Started Summer Internship at Mayo Clinic (QHS team)</h3>
+            <span class="date">June, 2023</span>
+            <p><a href="https://www.mayo.edu/research/departments-divisions/quantitative-health-sciences/overview" target="_blank">Read here</a></p>
+          </article>
+          
+          <!-- Update 6 -->
+          <article class="update">
+            <a href="https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf" target="_blank" class="update-link" aria-label="Read more about MMAE presentation"></a>
+            <h3>Presenting MMAE and Junior Chair at ML4H</h3>
+            <span class="date">November, 2022</span>
+            <p><a href="https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf" target="_blank">Details</a></p>
+          </article>
   
       <!-- ... Add more updates as needed ... -->
   
@@ -287,7 +453,7 @@
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/agarwal-circle-cropped.png" alt="cs188" width="160" height="160">
+              <img src="images/gates_center.png" alt="cs188" width="160" height="160">
             </td>
             <td width="75%" valign="center">
               <a href="https://courses.cs.washington.edu/courses/cse473/23sp/">{TA} CSE 473:  Introduction to Artificial Intelligence, Spring and Fall 2023.</a>
@@ -300,24 +466,7 @@
           </tr>
         </tbody></table>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Others</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/imbizo2020.png" alt="cs188" width="160" height="160">
-            </td>
-            <td width="75%" valign="center">
-              <p> <strong>Summer Schools</strong> : <a href="https://imbizo.africa/"> IBRO-SIMONS Computational neuroscience summer school | 2020 | CAPETOWN</a> </p>
-              <br>
-            </td>
-          </tr>
-        </tbody></table>
+
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
