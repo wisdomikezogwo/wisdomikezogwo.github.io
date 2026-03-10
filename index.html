@@ -1,487 +1,420 @@
-<!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <!-- Hi, Jon Here. Please DELETE the two <script> tags below if you use this HTML, otherwise my analytics will track your page -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7580334-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-7580334-2');
-  </script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wisdom O. Ikezogwo</title>
-  
-  <script>
-    function toggleDropdown() {
-        const container = document.querySelector('.dropdown-container');
-        container.classList.toggle('active');
-    }
-  </script>
-  
-  <style>
-    /* Base styles for the container */
-    .dropdown-container {
-        position: relative;
-        width: 100%;
-        max-width: 600px; /* or any desired max-width */
-        margin: 20px auto;
-    }
-
-    /* The hidden content */
-    .dropdown-content {
-        display: none;
-        width: 100%;
-        border-top: 1px solid #aaa;
-    }
-
-    /* The button with a downward arrow */
-    .dropdown-button {
-        display: inline-block;
-        background-color: transparent;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    /* Display content when container is active */
-    .dropdown-container.active .dropdown-content {
-        display: block;
-    }
-        
-    /* Icon styles */
-    .icon-link {
-      font-size: 18px;
-      margin: 0 8px;
-      color: #1772d0;
-      text-decoration: none;
-    }
-    
-    .icon-link:hover {
-      color: #f09228;
-    }
-    
-  /* Clickable news cards */
-  .update {
-    margin-bottom: 8px !important;
-    padding: 6px !important;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    border: 1px solid #eee;
-    cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
-    position: relative;
-  }
-  
-  .update:hover {
-    background-color: #f0f0f0;
-    transform: translateY(-1px);
-  }
-  
-  .update h3 {
-    font-size: 14px;
-    margin-bottom: 0;
-    padding-right: 70px; /* Make room for date */
-    color: #333;
-  }
-  
-  .date {
-    font-size: 12px;
-    color: #777;
-    position: absolute;
-    right: 8px;
-    top: 6px;
-  }
-  
-  /* Hide the read more link visually but keep it accessible */
-  .update p {
-    height: 0;
-    margin: 0;
-    overflow: hidden;
-  }
-  
-  /* Make the entire card clickable */
-  .update-link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-</style>
-
   <meta name="author" content="Wisdom O. Ikezogwo">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/seal_icon.png">
-  <!-- Add Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta name="description" content="Wisdom Ikezogwo - PhD candidate at the University of Washington. Research in multimodal AI, medical AI, and generative modeling.">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/new_image.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-
 <body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Wisdom O. Ikezogwo</name>
-              </p>
 
-              <p style="text-align:center">
-                <a href="mailto:wisdomik@cs.washington.edu" class="icon-link"><i class="fas fa-envelope" title="Email"></i></a>
-                <a href="data/academic_cv.pdf" class="icon-link"><i class="fas fa-file-alt" title="CV"></i></a>
-                <a href="https://scholar.google.com/citations?user=gt5I_iYAAAAJ&hl=en" class="icon-link"><i class="fas fa-graduation-cap" title="Google Scholar"></i></a>
-                <a href="https://github.com/wisdomikezogwo" class="icon-link"><i class="fab fa-github" title="GitHub"></i></a>
-                <a href="https://www.linkedin.com/in/wisdom-o-i/" class="icon-link"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
-              </p>
+<div class="container">
 
-              <p>I am a 4th year PhD student in 
-                 <a href="https://www.cs.washington.edu/"> Computer Science & Engineering at University of Washington</a>,
-                  where I work with Prof. <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a> and <a href="https://scholar.google.com/citations?user=nBwaXUsAAAAJ&hl=en">Linda Shapiro</a> 
-                  . Previously, I received my B.Sc. from Obafemi Awolowo University, where I was fortunate to work with Prof.<a href="https://scholar.google.com/citations?user=aYIMS9gAAAAJ&hl=en"> Kayode P. Ayodele</a>.
-              </p>
+  <!-- ===== HEADER / BIO ===== -->
+  <div class="header">
+    <div class="header-inner">
+      <div class="header-photo">
+        <img src="images/new_image.png" alt="Wisdom O. Ikezogwo">
+      </div>
+      <div class="header-info">
+        <h1>Wisdom O. Ikezogwo</h1>
+        <p class="subtitle">PhD Candidate, Computer Science &amp; Engineering, University of Washington</p>
+        <p class="bio">
+          I am a final-year PhD student at the <a href="https://www.cs.washington.edu/">Paul G. Allen School of Computer Science &amp; Engineering</a> at the University of Washington, advised by Prof. <a href="https://www.ranjaykrishna.com/index.html">Ranjay Krishna</a> and Prof. <a href="https://homes.cs.washington.edu/~shapiro/">Linda Shapiro</a>. I am also a student researcher at the <a href="https://prior.allenai.org/">PRIOR team at AI2</a>. Previously, I received my B.Sc. from Obafemi Awolowo University, where I worked with Prof. <a href="https://scholar.google.com/citations?user=aYIMS9gAAAAJ&hl=en">Kayode P. Ayodele</a>.
+        </p>
+        <p class="bio" style="margin-top:8px;">
+          My research advances <strong>multimodal representation and generative modeling</strong> through effective alignment strategies, spanning large-scale data curation, benchmarking, multi-agent reasoning, and physics-informed generative models for improved temporal consistency and physical plausibility.
+        </p>
+        <div class="social-links">
+          <a href="mailto:wisdomik@cs.washington.edu" title="Email"><i class="fas fa-envelope"></i></a>
+          <a href="data/academic_cv.pdf" title="CV"><i class="fas fa-file-alt"></i></a>
+          <a href="https://scholar.google.com/citations?user=gt5I_iYAAAAJ&hl=en" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://github.com/wisdomikezogwo" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/wisdom-o-i/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="status-banner">
+          I am graduating in <strong>Spring 2026</strong> and am actively open to research and industry opportunities.
+          I am also open to <strong>collaborating with clinicians</strong> on medical AI projects &mdash;
+          <a href="https://calendly.com/wisdomik-cs/1-on-1-meeting" target="_blank">reach out here</a>.
+        </div>
+      </div>
+    </div>
+  </div>
 
-              
-            </td>
-            <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/JonBarron.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/new_image.png" class="hoverZoomLink"></a>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Research Interest</heading>
-              <p>
-                <!-- My research interest lies in developing state-of-the-art machine learning techniques for Medical Multimodal Understanding (MMU)
-                 with a special focus on tackling challenges of clinical deployment of ml models such as distributional shift, and explainability, enabling robustness and trust of these deployed models.
-                -->
-                My research aims to advance multimodal representation and generative modeling through effective alignment strategies. On the data side, I study:
-                <ul>
-                  <li>Large-scale data curation methods to connect various co-occurring or connected modalities (e.g., vision and language) across domains, creating multimodal datasets that enable large-scale training without expensive annotation.</li>
-                  <li>Benchmarking models.</li>
-                </ul>
-                On the model side, I focus on:
-                <ul>
-                  <li>Multimodal reasoning, developing multi-agent frameworks and foundation models aligned to human experts.</li>
-                  <li>Improving image/video generative models through alignment to expected behavior, specifically with an interest in physics-informed approaches that improve temporal consistency and physical plausibility.</li>
-                </ul>
+  <!-- ===== NEWS ===== -->
+  <div class="section">
+    <h2 class="section-title">News</h2>
+    <ul class="news-list">
+      <li>
+        <span class="news-date">Mar 2026</span>
+        <span class="news-text">New preprint: <a href="https://arxiv.org/abs/2603.05659">When Rubrics Fail: Error Enumeration as Reward for Virtual Try-On</a></span>
+      </li>
+      <li>
+        <span class="news-date">Feb 2026</span>
+        <span class="news-text">New preprint: <a href="https://arxiv.org/abs/2602.23543">Synthetic Visual Genome 2: Spatio-Temporal Scene Graphs from Videos</a></span>
+      </li>
+      <li>
+        <span class="news-date">Feb 2026</span>
+        <span class="news-text">Joined <a href="https://prior.allenai.org/">AI2 PRIOR team</a> as a student researcher</span>
+      </li>
+      <li>
+        <span class="news-date">Jan 2026</span>
+        <span class="news-text">Organizing the <a href="https://evgenfm2026.github.io/">EvGenFM Workshop</a> (Evaluation of Generative Foundation Models)</span>
+      </li>
+      <li>
+        <span class="news-date">2025</span>
+        <span class="news-text"><a href="https://arxiv.org/abs/2508.02951">MedBLINK</a> accepted at CVAMD Workshop, ICCV 2025</span>
+      </li>
+      <li>
+        <span class="news-date">May 2025</span>
+        <span class="news-text">Started PhD research internship at <strong>Amazon</strong></span>
+      </li>
+      <li>
+        <span class="news-date">Jun 2024</span>
+        <span class="news-text"><a href="https://www.washington.edu/populationhealth/2024/06/18/initiative-announces-awardees-of-ai-focused-population-health-pilot-projects/">UW Population Health Initiative</a> &mdash; AI Pilot Research Grant Award</span>
+      </li>
+      <li>
+        <span class="news-date">Apr 2024</span>
+        <span class="news-text">Started AIML research internship at <strong>Apple</strong></span>
+      </li>
+      <li>
+        <span class="news-date">Feb 2024</span>
+        <span class="news-text"><a href="https://arxiv.org/abs/2312.04746">Quilt-LLaVA</a> accepted at CVPR 2024</span>
+      </li>
+      <li>
+        <span class="news-date">Oct 2023</span>
+        <span class="news-text"><a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/">Medical AI Renaissance</a> accepted for Microsoft Accelerating Foundation Models Research Grant</span>
+      </li>
+      <li>
+        <span class="news-date">Sep 2023</span>
+        <span class="news-text"><a href="https://neurips.cc/virtual/2023/poster/73608">Quilt-1M</a> accepted at NeurIPS 2023 <span style="color:#d32f2f;font-weight:600;">(Oral)</span></span>
+      </li>
+    </ul>
+  </div>
 
+  <!-- ===== EXPERIENCE ===== -->
+  <div class="section">
+    <h2 class="section-title">Experience</h2>
+    <div class="experience-grid">
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fab fa-amazon" style="color:#ff9900;"></i></div>
+        <div class="exp-details">
+          <h3>PhD Research Intern</h3>
+          <div class="exp-org">Amazon</div>
+          <div class="exp-meta">May 2025 &ndash; Nov 2025 &middot; Seattle, WA</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fab fa-apple" style="color:#333;"></i></div>
+        <div class="exp-details">
+          <h3>AIML Research Intern</h3>
+          <div class="exp-org">Apple</div>
+          <div class="exp-meta">Apr 2024 &ndash; Sep 2024 &middot; Cupertino, CA</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fas fa-hospital" style="color:#0057b8;"></i></div>
+        <div class="exp-details">
+          <h3>Graduate Research Intern</h3>
+          <div class="exp-org">Mayo Clinic</div>
+          <div class="exp-meta">Jun 2023 &ndash; May 2024 &middot; Rochester, MN</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fas fa-flask" style="color:#4b8bbe;"></i></div>
+        <div class="exp-details">
+          <h3>Student Researcher</h3>
+          <div class="exp-org">AI2 &mdash; PRIOR Team</div>
+          <div class="exp-meta">Feb 2026 &ndash; Present &middot; Seattle, WA</div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <!-- ===== FEATURED TALK ===== -->
+  <div class="section">
+    <h2 class="section-title">Featured Talk</h2>
+    <div class="featured-talk">
+      <div class="talk-thumbnail">
+        <iframe src="https://www.youtube.com/embed/FiCr2yUafPE" title="Cohere Talk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="talk-info">
+        <h3>Quilt-1M &amp; Quilt-LLaVA: Building Medical Vision-Language Models from YouTube</h3>
+        <p>Invited talk at <strong>Cohere For AI</strong> on curating large-scale medical vision-language datasets from educational videos and training multimodal models for histopathology.</p>
+      </div>
+    </div>
+  </div>
 
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/pathfinder.gif" alt="clean-usnob" width="160" height="160">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/abs/2501.04184">
-                <papertitle>PathFinder: A Multi-Modal Multi-Agent System for Medical Diagnostic Decision-Making Applied to Histopathology</papertitle>
-              </a>
-              <br>
-              <a href="https://wisdomikezogwo.github.io/"> <strong>Wisdom O. Ikezogwo</strong> </a>,
-              <a href="https://fghezloo.github.io/"> Fatemeh Ghezloo </a>,
-              <a href="https://mehmetsayginseyfioglu.github.io/"> Mehmet Saygin Seyfioglu</a>,
-              <a href="https://github.com/RustinS"> Rustin Soraki</a>,
-              <a href="https://www.beibinli.com/"> Beibin Li</a>,
-              <a href=""> Tejoram Vivekanandan</a>,
-              <a href="https://www.uclahealth.org/providers/joann-elmore"> Joann G. Elmore</a>,
-              <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a> and
-              <a href="https://homes.cs.washington.edu/~shapiro/">  Linda Shapiro </a>
-              <br>
+  <!-- ===== PUBLICATIONS ===== -->
+  <div class="section">
+    <h2 class="section-title">Publications</h2>
 
-              <em>PrePrint </em> 2025.
-                <details>
-                  <summary>PathFinder: A four-agent AI system for histopathology that outperforms both SOTA methods (+8%) and human pathologists (+9%) in melanoma diagnosis while providing explainable results through expert-like image navigation and description.
-                  </summary>
-                  <p>
-                    Diagnosing diseases through histopathology whole slide images (WSIs) is fundamental in modern pathology but is challenged by the gigapixel scale and complexity of WSIs. PathFinder is a multi-modal, multi-agent framework that emulates the decision-making process of expert pathologists by integrating four AI agents: Triage, Navigation, Description, and Diagnosis. The Triage Agent distinguishes benign versus risky WSIs, then the Navigation and Description Agents collaboratively identify significant regions, provide importance maps, and generate natural language descriptions of relevant patches. Finally, the Diagnosis Agent synthesizes these findings into a comprehensive diagnosis. PathFinder outperforms state-of-the-art methods in skin melanoma diagnosis by 8% while offering inherent explainability, with pathologist evaluations finding that the descriptions it generates are on par with GPT-4. Remarkably, PathFinder is also the first AI system to surpass the average performance of pathologists on this task by 9%, setting a new standard for accurate and interpretable AI-assisted diagnostics in pathology.
-                  </p>
-                </details>
+    <!-- 2026 -->
+    <div class="pub-year">2026</div>
 
-            </td>
-          </tr>
-          
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/mednarratives.gif" alt="clean-usnob" width="160" height="160">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/abs/2501.04184">
-                <papertitle>MedicalNarratives: Connecting Medical Vision and Language with Localized Narratives</papertitle>
-              </a>
-              <br>
-              <a href="https://wisdomikezogwo.github.io/"> <strong>Wisdom O. Ikezogwo</strong> </a>,
-              <a href="https://www.linkedin.com/in/kevin-zhang-275661290/"> Kevin Zhang</a>,
-              <a href="https://mehmetsayginseyfioglu.github.io/"> Mehmet Saygin Seyfioglu</a>,
-              <a href="https://fghezloo.github.io/"> Fatemeh Ghezloo </a>, 
-              <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a> and
-              <a href="https://homes.cs.washington.edu/~shapiro/">  Linda Shapiro </a>
-              <br>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/iec.png" alt="IEC Virtual Try-On">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2603.05659">When Rubrics Fail: Error Enumeration as Reward in Reference-Free RL Post-Training for Virtual Try-On</a></div>
+        <div class="pub-authors"><span class="me">Wisdom Ikezogwo</span>, Mehmet Saygin Seyfioglu, Ranjay Krishna, Karim Bouyarmane</div>
+        <div class="pub-venue">arXiv Preprint, 2026</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2603.05659">arXiv</a>
+          <a href="https://arxiv.org/pdf/2603.05659">PDF</a>
+        </div>
+      </div>
+    </div>
 
-              <em>PrePrint </em> 2025.
-                <details>
-                  <summary>MedicalNarratives: A dataset of 4.7M image-text pairs from medical videos that aligns speech with mouse movements. Trained GenMedCLIP model achieves SOTA across 12 medical domains.
-                  </summary>
-                  <p>
-                    We propose MedicalNarratives, a dataset curated from medical pedagogical videos, inspired by Localized Narratives. It synchronizes instructors’ speech and mouse movements to create multimodal data for both semantic and dense objectives in medical AI tasks. MedicalNarratives contains 4.7M image-text pairs, with 1M having trace-level or bounding-box-level annotations. Trained with these data, our GenMedCLIP achieves state-of-the-art performance on medical imaging benchmarks spanning 12 domains, enabling integrated semantic and dense objectives without relying on separately trained models.
-                  </p>
-                </details>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/traser.png" alt="SVG2">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2602.23543">Synthetic Visual Genome 2: Extracting Large-scale Spatio-Temporal Scene Graphs from Videos</a></div>
+        <div class="pub-authors">Ziqi Gao, Jieyu Zhang, <span class="me">Wisdom O. Ikezogwo</span>, Jae Sung Park, Tario G. You, Daniel Ogbu, Chenhao Zheng, Weikai Huang, Yinuo Yang, Winson Han, Quan Kong, Rajat Saini, Ranjay Krishna</div>
+        <div class="pub-venue">arXiv Preprint, 2026</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2602.23543">arXiv</a>
+          <a href="https://uwgzq.github.io/papers/SVG2/">Web</a>
+        </div>
+      </div>
+    </div>
 
-            </td>
-          </tr>
+    <!-- 2025 -->
+    <div class="pub-year">2025</div>
 
-          
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/quiltllava.gif" alt="clean-usnob" width="160" height="160">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/abs/2312.04746">
-                <papertitle>Quilt-LLaVA: Visual Instruction Tuning by Extracting Localized Narratives from Open-Source Histopathology Videos</papertitle>
-              </a>
-              <br>
-              <a href="https://wisdomikezogwo.github.io/"> <strong>Wisdom O. Ikezogwo</strong> </a>,
-              <a href="https://mehmetsayginseyfioglu.github.io/"> Mehmet Saygin Seyfioglu</a>,
-              <a href="https://fghezloo.github.io/"> Fatemeh Ghezloo </a>, 
-              <a href="https://www.ranjaykrishna.com/index.html">  Ranjay Krishna </a> and
-              <a href="https://homes.cs.washington.edu/~shapiro/">  Linda Shapiro </a>
-              <br>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/pathfinder.gif" alt="PathFinder">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2502.08916">PathFinder: A Multi-Modal Multi-Agent System for Medical Diagnostic Decision-Making Applied to Histopathology</a></div>
+        <div class="pub-authors"><span class="me">Wisdom O. Ikezogwo</span>, Fatemeh Ghezloo, Mehmet Saygin Seyfioglu, Rustin Soraki, Beibin Li, Tejoram Vivekanandan, Joann G. Elmore, Ranjay Krishna, Linda Shapiro</div>
+        <div class="pub-venue">Preprint, 2025</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2502.08916">arXiv</a>
+          <a href="https://arxiv.org/pdf/2502.08916">PDF</a>
+        </div>
+      </div>
+    </div>
 
-              <em>CVPR </em> June 2024.
-                <details>
-                  <summary>Challenges in histopathology: 1) Lack of spatial grounding in image-language datasets; 2) Isolated image-text pairs from PubMed. Solution: Using YouTube content to create a visual instruction tuning dataset. Extracting mouse cursor movements for spatial awareness. Joint training of vision and text encoders yields a superior visual chatbot, surpassing state-of-the-art on histopathology benchmarks.
-                  </summary>
-                  <p>
-                    The gigapixel scale of whole slide images (WSIs) poses a challenge for histopathology multi-modal chatbots, requiring a global WSI analysis for diagnosis, compounding evidence from different WSI patches. Current visual instruction datasets, generated through large language models, focus on creating question/answer pairs for individual image patches, which may lack diagnostic capacity on their own in histopathology, further complicated by the absence of spatial grounding in histopathology image captions.
-                    To bridge this gap, we introduce Quilt-Instruct, a large-scale dataset of 107,131 histopathology-specific instruction question/answer pairs, that is collected by leveraging educational histopathology videos from YouTube, which provides spatial localization of captions by automatically extracting narrators' cursor movements. In addition, we provide contextual reasoning by extracting diagnosis and supporting facts from the entire video content to guide the extrapolative reasoning of GPT-4. Using Quilt-Instruct, we train Quilt-LLaVA, which can reason beyond the given single image patch, enabling diagnostic reasoning and the capability of spatial awareness. To evaluate Quilt-LLaVA, we propose a comprehensive evaluation dataset created from 985 images and 1283 human-generated question-answers directly extracted from videos. We also thoroughly evaluate Quilt-LLaVA using public histopathology datasets, where Quilt-LLaVA significantly outperforms SOTA by over 10% on relative GPT-4 score and 4% and 9% on open and closed set VQA.
-                  </p>
-                </details>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/mednarratives.gif" alt="MedicalNarratives">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2501.04184">MedicalNarratives: Connecting Medical Vision and Language with Localized Narratives</a></div>
+        <div class="pub-authors"><span class="me">Wisdom O. Ikezogwo</span>, Kevin Zhang, Mehmet Saygin Seyfioglu, Fatemeh Ghezloo, Ranjay Krishna, Linda Shapiro</div>
+        <div class="pub-venue">Preprint, 2025</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2501.04184">arXiv</a>
+          <a href="https://medical-narratives.github.io/">Web</a>
+        </div>
+      </div>
+    </div>
 
-            </td>
-          </tr>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/medblink_teaser.png" alt="MedBLINK">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2508.02951">MedBLINK: Probing Basic Perception in Multimodal Language Models for Medicine</a></div>
+        <div class="pub-authors">Mahtab Bigverdi, <span class="me">Wisdom Ikezogwo</span>, Kevin Zhang, Hyewon Jeong, Mingyu Lu, Sungjae Cho, Linda Shapiro, Ranjay Krishna</div>
+        <div class="pub-venue">CVAMD Workshop, ICCV 2025</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2508.02951">arXiv</a>
+          <a href="https://arxiv.org/pdf/2508.02951">PDF</a>
+        </div>
+      </div>
+    </div>
 
-          
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/quilt1m.png" alt="clean-usnob" width="160" height="160">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/abs/2306.11207">
-                <papertitle>Quilt-1M: One Million Image-Text Pairs for Histopathology.</papertitle>
-              </a>
-              <br>
-              <strong>Wisdom O. Ikezogwo</strong>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Seyfioglu%2C+M+S">
-                 Mehmet Saygin Seyfioglu</a>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Shapiro%2C+L">
-                Fatemeh Ghezloo, Dylan Geva, Fatwir S. Mohammed, Pavan K. Anand, Ranjay Krishna and Linda Shapiro</a>
-              <br>
-              <em>NeurIPS (ORAL)</em> June 2023.
-                <details>
-                  <summary>Recent accelerations in multi-modal applications have been made possible with the plethora of image and text data available online. However, the scarcity of similar data in the medical field, specifically in histopathology, has slowed similar progress. To enable similar representation learning 
-                    for histopathology, we turn to YouTube, an untapped resource of videos, offering 1,087 hours of valuable educational histopathology videos from expert clinicians. From YouTube, we curate Quilt: a large-scale vision-language dataset consisting of 802,148 image and text pairs.
-                  </summary>
-                  <p>
-                    Quilt was automatically
-                     curated using a mixture of models, including large language models, handcrafted algorithms, human knowledge databases, and automatic speech recognition. In comparison, the most comprehensive datasets curated for histopathology amass only around 200K samples. We combine Quilt with datasets, 
-                     from other sources, including Twitter, research papers, and the internet in general, to create an even larger dataset: Quilt-1M, with 1M paired image-text samples, marking it as the largest vision-language histopathology dataset to date. We demonstrate the value of Quilt-1M by fine-tuning a 
-                     pre-trained CLIP model. Our model outperforms state-of-the-art models on both zero-shot and linear probing tasks for classifying new pathology images across 13 diverse patch-level datasets of 8 different sub-pathologies and cross-modal retrieval tasks.
-                    
-                  </p>
-                </details>
+    <!-- 2024 -->
+    <div class="pub-year">2024</div>
 
-            </td>
-          </tr>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/quiltllava.gif" alt="Quilt-LLaVA">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2312.04746">Quilt-LLaVA: Visual Instruction Tuning by Extracting Localized Narratives from Open-Source Histopathology Videos</a></div>
+        <div class="pub-authors"><span class="me">Wisdom O. Ikezogwo</span>, Mehmet Saygin Seyfioglu, Fatemeh Ghezloo, Ranjay Krishna, Linda Shapiro</div>
+        <div class="pub-venue">CVPR 2024</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2312.04746">arXiv</a>
+          <a href="https://arxiv.org/pdf/2312.04746">PDF</a>
+        </div>
+      </div>
+    </div>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/multiscale_.png" alt="clean-usnob" width="160" height="160">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/pdf/2209.01534">
-                <papertitle>Multi-Scale Cross-Attention Multiple Instance Learning Network for
-                  Risk Stratification of Whole Slide Images.</papertitle>
-              </a>
-              <br>
-              <strong>Wisdom O. Ikezogwo</strong>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Seyfioglu%2C+M+S">
-                Christopher Chandler, Jatin S. Gandhi, Annie Garcia, Courtney Daum,
-                Elizabeth Loggers, Linda G. Shapiro, Jose G. Mantilla, Anshu Bandhlish, Robert W. Ricciotti</a>
-              <br>
-              <em>Abstract (Oral Platform Presentation)*, United States and Canadian Academy of Pathology (USCAP)</em> April 2023.
-            </td>
-          </tr>
+    <!-- 2023 -->
+    <div class="pub-year">2023</div>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/mmae2.png" alt="clean-usnob" width="160" height="160">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/pdf/2209.01534">
-                <papertitle>Multi-modal Masked Autoencoders Learn Compositional Histopathological Representations.</papertitle>
-              </a>
-              <br>
-              <strong>W.O. Ikezogwo</strong>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Seyfioglu%2C+M+S"> Mehmet Saygin Seyfioglu</a>, <a href="https://arxiv.org/search/cs?searchtype=author&query=Shapiro%2C+L">Linda Shapiro</a>
-              <br>
-              <em>Extended abstract: Machine Learning for Health (ML4H),</em> Dec 2022.
-            </td>
-          </tr>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/quilt1m.png" alt="Quilt-1M">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2306.11207">Quilt-1M: One Million Image-Text Pairs for Histopathology</a></div>
+        <div class="pub-authors"><span class="me">Wisdom O. Ikezogwo</span>, Mehmet Saygin Seyfioglu, Fatemeh Ghezloo, Dylan Geva, Fatwir S. Mohammed, Pavan K. Anand, Ranjay Krishna, Linda Shapiro</div>
+        <div class="pub-venue">NeurIPS 2023 <span class="award">(Oral)</span></div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2306.11207">arXiv</a>
+          <a href="https://arxiv.org/pdf/2306.11207">PDF</a>
+          <a href="https://quilt1m.github.io/">Project Page</a>
+        </div>
+      </div>
+    </div>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/cbm2020.png" alt="clean-usnob" width="160" height="160">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010482520301323">
-                <papertitle>Supervised domain generalization for integration of disparate scalp EEG datasets for automatic epileptic seizure detection</papertitle>
-              </a>
-              <br>
-              <a href="https://scholar.google.com/citations?user=aYIMS9gAAAAJ&hl=en">K.P. Ayodele</a>, <strong>W.O. Ikezogwo</strong>, <a href="https://www.mendeley.com/authors/11939648100/">M.A. Komolafe</a>, <a href="https://scholar.google.com/citations?user=hInUS0QAAAAJ&hl=en"> P. Ogunbona</a>
-              <br>
-              <em>Computers in Biology and Medicine</em> Volume 120, May 2020, 103757
-              <p>We use supervised domain generalization to combine disparate EEG datasets and a recurrent convolutional neural network detector to test the generalizability of the trained model on an out-of-distribution private epilepsy seizure dataset.</p>
-            </td>
-          </tr>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/multiscale_.png" alt="MsCAMIL">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/pdf/2209.01534">Multi-Scale Cross-Attention Multiple Instance Learning Network for Risk Stratification of Whole Slide Images</a></div>
+        <div class="pub-authors"><span class="me">Wisdom O. Ikezogwo</span>, Christopher Chandler, Jatin S. Gandhi, Annie Garcia, Courtney Daum, Elizabeth Loggers, Linda G. Shapiro, Jose G. Mantilla, Anshu Bandhlish, Robert W. Ricciotti</div>
+        <div class="pub-venue">Oral Platform Presentation, USCAP 2023</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/pdf/2209.01534">PDF</a>
+        </div>
+      </div>
+    </div>
 
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/ijoe.png" alt="clean-usnob" width="160" height="160">
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://pdfs.semanticscholar.org/76bf/7ea4c1c7817cfae5c356cd4fd17f397336fe.pdf">
-                <papertitle>Empirical Characterization of the Temporal Dynamics of EEG Spectral Components.</papertitle>
-              </a>
-              <br>
-              <a href="https://scholar.google.com/citations?user=aYIMS9gAAAAJ&hl=en">K.P. Ayodele</a>, <strong>W.O. Ikezogwo</strong>, Anthony A. Osuntunyi
-              <br>
-              <em>International Journal of Online and Biomedical Engineering (iJOE)</em>  Volume 16, Dec 2020.
-            </td>
-          </tr>
+    <!-- 2022 -->
+    <div class="pub-year">2022</div>
 
-        </tbody></table>
-    
-        
-    <!-- News/Updates Section -->
-    <section id="news-updates">
-      <h2>News & Updates</h2>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/mmae2.png" alt="MMAE">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://arxiv.org/pdf/2209.01534">Multi-modal Masked Autoencoders Learn Compositional Histopathological Representations</a></div>
+        <div class="pub-authors"><span class="me">W.O. Ikezogwo</span>, Mehmet Saygin Seyfioglu, Linda Shapiro</div>
+        <div class="pub-venue">Extended Abstract, ML4H 2022</div>
+        <div class="pub-links">
+          <a href="https://arxiv.org/pdf/2209.01534">PDF</a>
+        </div>
+      </div>
+    </div>
 
-        <!-- Update 1 -->
-        <section id="news-updates">
-          <h2>News & Updates</h2>
+    <!-- 2020 -->
+    <div class="pub-year">2020</div>
 
-          
-          
-            <!-- Update 1 -->
-            <article class="update">
-              <a href="https://www.washington.edu/populationhealth/2024/06/18/initiative-announces-awardees-of-ai-focused-population-health-pilot-projects/" target="_blank" class="update-link" aria-label="Read more about Quilt-LLaVA"></a>
-              <h3> UW Population Health Initiative — AI Pilot Research Grant Award</h3>
-              <span class="date">2024</span>
-              <p><a href="https://www.washington.edu/populationhealth/2024/06/18/initiative-announces-awardees-of-ai-focused-population-health-pilot-projects/" target="_blank">Read here</a></p>
-            </article>
-          
-            <!-- Update 1 -->
-            <article class="update">
-              <a href="https://arxiv.org/abs/2312.04746" target="_blank" class="update-link" aria-label="Read more about Quilt-LLaVA"></a>
-              <h3>Quilt-LLaVA has been accepted at CVPR 2024</h3>
-              <span class="date">February, 2024</span>
-              <p><a href="https://arxiv.org/abs/2312.04746" target="_blank">Read here</a></p>
-            </article>
-          
-            <!-- Update 2 -->
-            <article class="update">
-              <a href="https://www.apple.com" target="_blank" class="update-link" aria-label="Read more about Apple internship"></a>
-              <h3>Interning at Apple in Spring & Summer of 2024</h3>
-              <span class="date">January, 2024</span>
-              <p><a href="https://www.apple.com" target="_blank">Read here</a></p>
-            </article>
-          
-           <!-- Update 3 -->
-           <article class="update">
-            <a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/phase-ii/#:~:text=Medical%20AI%20Renaissance%3A%20A%20Trio%20of%20Medical%20Projects%20from%20Data%20Curation%20to%20Multi%2DModal%20Chatbot%20Training%20to%20Evaluation%0AUniversity%20Of%20Washington%2C%20Linda%20Shapiro" target="_blank" class="update-link" aria-label="Read more about Microsoft grant"></a>
-            <h3>Medical AI Renaissance Proposal Accepted for Microsoft's Accelerating Foundation Model Research Grant</h3>
-            <span class="date">October, 2023</span>
-            <p><a href="https://www.microsoft.com/en-us/research/collaboration/accelerating-foundation-models-research/phase-ii/#:~:text=Medical%20AI%20Renaissance%3A%20A%20Trio%20of%20Medical%20Projects%20from%20Data%20Curation%20to%20Multi%2DModal%20Chatbot%20Training%20to%20Evaluation%0AUniversity%20Of%20Washington%2C%20Linda%20Shapiro" target="_blank">Read here</a></p>
-          </article>
-          
-          <!-- Update 4 -->
-          <article class="update">
-            <a href="https://neurips.cc/virtual/2023/poster/73608" target="_blank" class="update-link" aria-label="Read more about Quilt-1M"></a>
-            <h3>Quilt-1M has been accepted at NeurIPS 2023 (ORAL)</h3>
-            <span class="date">September, 2023</span>
-            <p><a href="https://neurips.cc/virtual/2023/poster/73608" target="_blank">Read here</a></p>
-          </article>
-          
-          <!-- Update 5 -->
-          <article class="update">
-            <a href="https://www.mayo.edu/research/departments-divisions/quantitative-health-sciences/overview" target="_blank" class="update-link" aria-label="Read more about Mayo Clinic internship"></a>
-            <h3>Started Summer Internship at Mayo Clinic (QHS team)</h3>
-            <span class="date">June, 2023</span>
-            <p><a href="https://www.mayo.edu/research/departments-divisions/quantitative-health-sciences/overview" target="_blank">Read here</a></p>
-          </article>
-          
-          <!-- Update 6 -->
-          <article class="update">
-            <a href="https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf" target="_blank" class="update-link" aria-label="Read more about MMAE presentation"></a>
-            <h3>Presenting MMAE and Junior Chair at ML4H</h3>
-            <span class="date">November, 2022</span>
-            <p><a href="https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf" target="_blank">Details</a></p>
-          </article>
-  
-      <!-- ... Add more updates as needed ... -->
-  
-  </section>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/cbm2020.png" alt="EEG Domain Generalization">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0010482520301323">Supervised Domain Generalization for Integration of Disparate Scalp EEG Datasets for Automatic Epileptic Seizure Detection</a></div>
+        <div class="pub-authors">K.P. Ayodele, <span class="me">W.O. Ikezogwo</span>, M.A. Komolafe, P. Ogunbona</div>
+        <div class="pub-venue">Computers in Biology and Medicine, Vol. 120, May 2020</div>
+        <div class="pub-links">
+          <a href="https://www.sciencedirect.com/science/article/abs/pii/S0010482520301323">Paper</a>
+        </div>
+      </div>
+    </div>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Teaching</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-          <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/gates_center.png" alt="cs188" width="160" height="160">
-            </td>
-            <td width="75%" valign="center">
-              <a href="https://courses.cs.washington.edu/courses/cse473/23sp/">{TA} CSE 473:  Introduction to Artificial Intelligence, Spring and Fall 2023.</a>
-              <p></p><a href="https://courses.cs.washington.edu/courses/cse160/">{TA} CSE 160: Data Programming, Fall 2021 & Winter 2022.</a>
-              <p> <a href="http://eee.oauife.edu.ng">{TA} EEE 203/201: Fundamentals of Electronic & Electrical Engr, First Semester 2019.</a> </p>
+    <div class="pub-entry">
+      <div class="pub-img">
+        <img src="images/ijoe.png" alt="EEG Spectral">
+      </div>
+      <div class="pub-text">
+        <div class="pub-title"><a href="https://pdfs.semanticscholar.org/76bf/7ea4c1c7817cfae5c356cd4fd17f397336fe.pdf">Empirical Characterization of the Temporal Dynamics of EEG Spectral Components</a></div>
+        <div class="pub-authors">K.P. Ayodele, <span class="me">W.O. Ikezogwo</span>, Anthony A. Osuntunyi</div>
+        <div class="pub-venue">International Journal of Online and Biomedical Engineering (iJOE), Vol. 16, Dec 2020</div>
+        <div class="pub-links">
+          <a href="https://pdfs.semanticscholar.org/76bf/7ea4c1c7817cfae5c356cd4fd17f397336fe.pdf">PDF</a>
+        </div>
+      </div>
+    </div>
 
-              <br>
-            </td>
+  </div>
 
-          </tr>
-        </tbody></table>
+  <!-- ===== TEACHING ===== -->
+  <div class="section">
+    <h2 class="section-title">Teaching</h2>
+    <ul class="teaching-list">
+      <li>
+        <span><a href="#">E E 562: Artificial Intelligence For Engineers</a> &mdash; Winter 2026</span>
+        <span class="teaching-role guest">Guest Lecturer</span>
+      </li>
+      <li>
+        <span><a href="https://courses.cs.washington.edu/courses/cse455/">CSE 455: Computer Vision</a> &mdash; Autumn 2025</span>
+        <span class="teaching-role">Teaching Assistant</span>
+      </li>
+      <li>
+        <span><a href="https://courses.cs.washington.edu/courses/cse473/23sp/">CSE 473: Introduction to Artificial Intelligence</a> &mdash; Spring &amp; Autumn 2023</span>
+        <span class="teaching-role">Teaching Assistant</span>
+      </li>
+      <li>
+        <span><a href="https://courses.cs.washington.edu/courses/cse160/">CSE 160: Data Programming</a> &mdash; Autumn 2022 &amp; Winter 2023</span>
+        <span class="teaching-role">Teaching Assistant</span>
+      </li>
+      <li>
+        <span><a href="http://eee.oauife.edu.ng">EEE 203/201: Fundamentals of Electronic &amp; Electrical Engineering</a> &mdash; 2019</span>
+        <span class="teaching-role">Teaching Assistant</span>
+      </li>
+    </ul>
+  </div>
 
+  <!-- ===== SERVICE & MENTORING ===== -->
+  <div class="section">
+    <h2 class="section-title">Service &amp; Mentoring</h2>
+    <div class="service-grid">
+      <div class="service-block">
+        <h3>Workshop Organizing</h3>
+        <ul>
+          <li><a href="https://evgenfm2026.github.io/">EvGenFM 2026</a> &mdash; Evaluation of Generative Foundation Models</li>
+        </ul>
+        <h3 style="margin-top:14px;">Reviewing</h3>
+        <ul>
+          <li>CVPR 2026</li>
+          <li>NeurIPS 2025</li>
+          <li>ICCV 2025</li>
+          <li>ECCV 2026</li>
+          <li>IEEE Transactions on Medical Imaging (TMI)</li>
+        </ul>
+      </div>
+      <div class="service-block">
+        <h3>Mentoring</h3>
+        <ul>
+          <li>Mentor, <a href="https://www.cs.washington.edu/academics/phd/pams">UW CSE Pre-Application Mentorship Service (PAMS)</a></li>
+        </ul>
+        <h3 style="margin-top:14px;">Awards</h3>
+        <ul>
+          <li>UW Population Health Initiative &mdash; AI Pilot Research Grant (2024)</li>
+          <li>Microsoft Accelerating Foundation Models Research Grant (2023)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
+  <!-- ===== EDUCATION ===== -->
+  <div class="section">
+    <h2 class="section-title">Education</h2>
+    <ul class="teaching-list">
+      <li>
+        <span><strong>University of Washington</strong> &mdash; Ph.D. in Computer Science &amp; Engineering</span>
+        <span class="teaching-role">2021 &ndash; 2026</span>
+      </li>
+      <li>
+        <span><strong>Obafemi Awolowo University</strong> &mdash; B.Sc. in Electronic &amp; Electrical Engineering</span>
+        <span class="teaching-role">2013 &ndash; 2019</span>
+      </li>
+    </ul>
+  </div>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:0px">
-              <br>
-              <p style="text-align:right;font-size:small;">
-                <br>
-                <a href="https://people.eecs.berkeley.edu/~barron/">Website credits: Jon Barron</a>
-              </p>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <p>&copy; 2026 Wisdom O. Ikezogwo &middot; <a href="https://people.eecs.berkeley.edu/~barron/" style="color:#aaa;">Website template credit: Jon Barron</a></p>
+  </div>
+
+</div>
+
 </body>
-
 </html>
