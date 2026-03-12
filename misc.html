@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misc &mdash; Wisdom O. Ikezogwo</title>
+  <meta name="author" content="Wisdom O. Ikezogwo">
+  <meta name="description" content="Students, ongoing projects, and miscellaneous information.">
+  <link rel="stylesheet" href="stylesheet.css?v=2">
+  <link rel="icon" type="image/png" href="images/new_image.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ===== HEADER ===== -->
+  <div class="header" style="padding-bottom:16px;">
+    <div style="display:flex;align-items:center;gap:12px;">
+      <a href="index.html" style="font-size:14px;color:#1772d0;">&larr; Back to main page</a>
+    </div>
+    <h1 style="margin-top:16px;">Misc</h1>
+    <p class="bio">Students, ongoing research projects, and other things.</p>
+  </div>
+
+  <!-- ===== STUDENTS ===== -->
+  <div class="section">
+    <h2 class="section-title">Students</h2>
+
+    <h3 style="font-size:15px;font-weight:600;margin-bottom:12px;color:#333;">Current Students</h3>
+    <div class="experience-grid" style="margin-bottom:24px;">
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fas fa-user-graduate" style="color:#4b8bbe;"></i></div>
+        <div class="exp-details">
+          <h3>Kevin Zhang</h3>
+          <div class="exp-org">MS Student, University of Washington</div>
+          <div class="exp-meta">Working together for 2 years &middot; Finishing MS &middot; On the MD-PhD market</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fas fa-user-graduate" style="color:#4b8bbe;"></i></div>
+        <div class="exp-details">
+          <h3>Kevin Xiao</h3>
+          <div class="exp-org">Undergraduate, University of Washington</div>
+          <div class="exp-meta">Current</div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="font-size:15px;font-weight:600;margin-bottom:12px;color:#333;">Alumni</h3>
+    <div class="experience-grid">
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fas fa-briefcase" style="color:#888;"></i></div>
+        <div class="exp-details">
+          <h3>Pavan Kumar Anand</h3>
+          <div class="exp-org">Now at Microsoft</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fas fa-briefcase" style="color:#888;"></i></div>
+        <div class="exp-details">
+          <h3>Fatwir S. Mohammed</h3>
+          <div class="exp-org">Now at Allen Institute</div>
+        </div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-logo"><i class="fas fa-briefcase" style="color:#888;"></i></div>
+        <div class="exp-details">
+          <h3>Tario G. You</h3>
+          <div class="exp-org">Former student</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ONGOING PROJECTS ===== -->
+  <!-- <div class="section">
+    <h2 class="section-title">Ongoing Projects</h2>
+
+    <div style="margin-bottom:28px;">
+      <h3 style="font-size:16px;font-weight:600;margin-bottom:8px;color:#111;">MolmoMed: Generalizable Medical Visual Grounding</h3>
+      <p style="font-size:14px;color:#444;line-height:1.7;">
+        MolmoMed aims to ground medical concepts in medical images and videos (2D and 3D) across all medical imaging modalities. Starting from an ontology of all known visible clinical features&mdash;those that can be seen and segmented across 3D volumes, video, and 2D images&mdash;we creatively collect spatial data from experts (indirectly) to cover the entire distribution of findings, not just the commonly annotated ones. The model is trained to reason over medical images in any modality or structure, and critically, to provide polygon groundings for each finding it identifies.
+      </p>
+    </div>
+
+    <div style="margin-bottom:28px;">
+      <h3 style="font-size:16px;font-weight:600;margin-bottom:8px;color:#111;">Agentic Hypothesis Generation in Biomedical Imaging</h3>
+      <p style="font-size:14px;color:#444;line-height:1.7;margin-bottom:10px;">
+        <em>Wisdom Ikezogwo, Mahtab Bigverdi, Ranjay Krishna, Joann G. Elmore, Linda Shapiro</em>
+      </p>
+      <p style="font-size:14px;color:#444;line-height:1.7;margin-bottom:10px;">
+        The inspiration for MolmoMed connects to a broader vision: developing a system that can validate known qualitative features in medical imaging with quantitative experiments, and more ambitiously, conduct radiomics-style research autonomously given a large cohort of medical imaging data. None of this is possible without a generalizable grounding model.
+      </p>
+      <p style="font-size:14px;color:#444;line-height:1.7;margin-bottom:10px;">
+        We are building a <strong>Multiomics Agent</strong> that discovers and validates imaging biomarkers at scale. Today, critical medical insights remain bottlenecked by human bandwidth. Radiomics&mdash;extracting quantitative, sub-visual features from medical images (CT, MRI)&mdash;largely remains an artisanal craft, where researchers spend months manually segmenting regions of interest and testing one hypothesis at a time.
+      </p>
+      <p style="font-size:14px;color:#444;line-height:1.7;margin-bottom:10px;">
+        Our agent takes in a clinical question and a cohort of images, then: formulates testable hypotheses about imaging features, mines large databases of scans with minimal human annotation, measures predictive power for outcomes, and validates findings for clinical reliability. The system consists of:
+      </p>
+      <ul style="font-size:14px;color:#444;line-height:1.7;padding-left:20px;margin-bottom:10px;">
+        <li><strong>Spatial Agent</strong> &mdash; Interprets free-form clinical text descriptions and returns precise image segmentations and measurements. Researchers can ask for complex composite features (e.g., "the volume of all ground-glass opacities in both lungs excluding the central bronchi") and receive precise ROIs and computed metrics.</li>
+        <li><strong>Radiomic Analyst Agent</strong> &mdash; Designs and executes entire studies autonomously. Given a clinical question with patient images and outcomes, it plans the analysis, queries the Spatial Agent for relevant features, extracts them across patients, performs statistical modeling, and interprets results.</li>
+        <li><strong>Continuous Learning Loop</strong> &mdash; Every interaction enriches the agent's knowledge, building on a corpus of radiomics trajectories from the literature, enabling the agent to propose its own variations and bridge ideas across diseases and modalities.</li>
+      </ul>
+      <p style="font-size:14px;color:#444;line-height:1.7;">
+        The agent is trained via reinforcement learning to reproduce and extend classical and modern radiomics studies, with rewards blending reproduction fidelity, robustness, and causal plausibility. We collaborate with clinicians throughout to ensure outputs are actionable and aligned with how they reason.
+      </p>
+    </div>
+  </div> --> 
+
+  <!-- ===== FOOTER ===== -->
+  <div class="footer">
+    <p>&copy; 2026 Wisdom O. Ikezogwo &middot; <a href="index.html" style="color:#aaa;">Home</a></p>
+  </div>
+
+</div>
+
+</body>
+</html>
