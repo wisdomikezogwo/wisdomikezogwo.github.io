@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paper — Wisdom O. Ikezogwo</title>
+  <meta name="author" content="Wisdom O. Ikezogwo">
+  <link rel="icon" type="image/png" href="images/new_image.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+    :root{ --bg:#faf8f3; --panel:#f1ede2; --ink:#221e18; --soft:#4a4438; --dim:#8a8271; --line:#e5e0d5; --acc:#8a2b20; --link:#0a6a4e; }
+    html.dark{ --bg:#17140f; --panel:#211d16; --ink:#e9e4d8; --soft:#c8c2b4; --dim:#8f887a; --line:#312b21; --acc:#e0897c; --link:#5fc79e; }
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'JetBrains Mono',ui-monospace,monospace;background:var(--bg);color:var(--ink);font-size:13.5px;line-height:1.8;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;}
+    .container{max-width:820px;margin:0 auto;padding:0 34px;}
+    a{color:var(--ink);border-bottom:1px solid var(--line);text-decoration:none;}
+    a:hover{color:var(--link);border-color:var(--link);}
+
+    .story-nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(9px);}
+    .story-nav-inner{max-width:820px;margin:0 auto;padding:14px 34px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    .story-nav a.back{font-size:13px;color:var(--ink);border:none;font-weight:500;white-space:nowrap;}
+    .story-nav a.back:hover{color:var(--link);}
+    .toggle{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;width:34px;height:32px;cursor:pointer;font-size:14px;display:inline-flex;align-items:center;justify-content:center;}
+    .toggle:hover{border-color:var(--dim);}
+    .story-progress{position:absolute;left:0;bottom:0;height:2px;background:var(--acc);width:0;transition:width .1s;}
+
+    .story-hero{padding:40px 0 8px;}
+    .story-venue{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);margin-bottom:12px;}
+    .story-venue .award{color:var(--acc);}
+    .story-hero h1{font-size:26px;font-weight:700;line-height:1.2;letter-spacing:-.4px;margin-bottom:12px;color:var(--ink);}
+    .story-authors{font-size:13px;color:var(--dim);line-height:1.6;margin-bottom:14px;}
+    .story-authors b{color:var(--ink);}
+    .story-tagline{font-size:16px;line-height:1.6;color:var(--soft);max-width:680px;margin:18px 0;padding-left:16px;border-left:3px solid var(--acc);}
+    .story-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;}
+    .story-links a{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:500;padding:6px 14px;border-radius:7px;border:1px solid var(--line);color:var(--link);}
+    .story-links a:hover{border-color:var(--link);background:var(--panel);}
+
+    .story-teaser{margin:26px 0 8px;border-radius:12px;overflow:hidden;}
+    .story-teaser img{width:100%;display:block;}
+
+    .section{padding:34px 0 6px;}
+    .section-title{font-size:18px;font-weight:700;letter-spacing:-.3px;color:var(--ink);margin-bottom:18px;padding-bottom:10px;border-bottom:1px solid var(--line);}
+
+    .beat{display:grid;grid-template-columns:1fr;gap:8px;padding:24px 0;opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease;}
+    .beat.in{opacity:1;transform:none;}
+    .beat-kind{font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--dim);margin-bottom:2px;}
+    .beat h2{font-size:19px;line-height:1.25;letter-spacing:-.2px;margin-bottom:6px;color:var(--ink);}
+    .beat p{font-size:14px;line-height:1.8;color:var(--soft);max-width:680px;}
+    .beat-figure{margin-top:18px;border-radius:10px;overflow:hidden;}
+    .beat-figure img{width:100%;display:block;}
+    .beat-figure figcaption{font-size:12px;color:var(--dim);padding:8px 2px 0;}
+
+    .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin:10px 0 4px;}
+    .stat-tile{text-align:left;}
+    .stat-value{font-size:30px;font-weight:700;color:var(--acc);letter-spacing:-.5px;line-height:1;}
+    .stat-label{font-size:12px;color:var(--dim);margin-top:8px;line-height:1.4;}
+
+    .embed-wrap{margin:8px 0;}
+    .embed-frame{width:100%;height:720px;border:1px solid var(--line);border-radius:10px;background:var(--panel);}
+    .embed-fallback{font-size:12.5px;color:var(--dim);margin-top:8px;}
+    .embed-fallback a{border:none;color:var(--link);}
+
+    .thread-nav{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:8px 0;}
+    .thread-nav a{display:block;padding:6px 0;border:none;transition:opacity .18s;}
+    .thread-nav a:hover{opacity:.7;}
+    .thread-nav .dir{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--dim);}
+    .thread-nav .tn-title{font-size:14px;font-weight:500;color:var(--ink);margin-top:4px;line-height:1.35;}
+    .thread-nav .next{text-align:right;}
+
+    .foot{max-width:820px;margin:56px auto 0;padding:16px 34px 40px;border-top:1px solid var(--line);color:var(--dim);font-size:12px;}
+    .foot a{border:none;color:var(--link);}
+
+    @media(max-width:700px){
+      .story-hero h1{font-size:22px;} .beat h2{font-size:17px;}
+      .stat-row{grid-template-columns:1fr;} .thread-nav{grid-template-columns:1fr;}
+      .embed-frame{height:520px;}
+    }
+  </style>
+</head>
+<body>
+
+  <div class="story-nav">
+    <div class="story-nav-inner">
+      <a class="back" href="index.html#pubs"><i class="fas fa-arrow-left"></i> all work</a>
+      <button class="toggle" id="themeBtn" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+    </div>
+    <div class="story-progress" id="progressBar"></div>
+  </div>
+
+  <div class="container" id="story"></div>
+
+  <div class="foot">© 2026 Wisdom O. Ikezogwo · <a href="index.html">home →</a> · <a href="research.html">research vision →</a></div>
+
+  <script>
+    (function(){
+      var root=document.documentElement;
+      var saved=localStorage.getItem('theme');
+      if(saved==='dark'||(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)) root.classList.add('dark');
+    })();
+  </script>
+  <script src="papers.js"></script>
+  <script src="story.js"></script>
+  <script>
+    (function(){
+      var root=document.documentElement, btn=document.getElementById('themeBtn');
+      function sync(){ btn.innerHTML=root.classList.contains('dark')?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>'; }
+      sync();
+      btn.addEventListener('click',function(){ root.classList.toggle('dark'); localStorage.setItem('theme',root.classList.contains('dark')?'dark':'light'); sync(); });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Wisdom O. Ikezogwo</title>
+<meta name="author" content="Wisdom O. Ikezogwo">
+<link rel="icon" type="image/png" href="images/new_image.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+  :root{ --bg:#faf8f3; --panel:#f1ede2; --ink:#221e18; --soft:#4a4438; --dim:#8a8271; --line:#e5e0d5; --acc:#8a2b20; --link:#0a6a4e; }
+  html.dark{ --bg:#17140f; --panel:#211d16; --ink:#e9e4d8; --soft:#c8c2b4; --dim:#8f887a; --line:#312b21; --acc:#e0897c; --link:#5fc79e; }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'JetBrains Mono',ui-monospace,monospace;background:var(--bg);color:var(--ink);font-size:13.5px;line-height:1.85;-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;}
+  .wrap{max-width:820px;margin:0 auto;padding:0 34px 90px;}
+  a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line);}
+  a:hover{color:var(--link);border-color:var(--link);}
+
+  .top{display:flex;justify-content:space-between;align-items:center;padding:22px 0;}
+  .top .who{font-weight:700;letter-spacing:-.3px;border:none;font-size:14px;}
+  .top .who:hover{color:var(--link);}
+  .toggle{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;width:34px;height:32px;cursor:pointer;font-size:14px;display:inline-flex;align-items:center;justify-content:center;}
+  .toggle:hover{border-color:var(--dim);}
+
+  h1{font-size:26px;font-weight:700;letter-spacing:-.5px;margin:26px 0 14px;}
+  .intro{color:var(--soft);max-width:720px;font-size:14px;margin-bottom:8px;}
+  .intro strong{color:var(--ink);font-weight:700;}
+
+  .thesis{display:grid;grid-template-columns:40px 1fr;gap:24px;margin:34px 0 22px;max-width:740px;}
+  .spine{position:relative;}
+  .spine svg{position:absolute;inset:0;height:100%;}
+  .vessel{fill:none;stroke:var(--line);stroke-width:2;stroke-linecap:round;}
+  .vessel.dashed{stroke-dasharray:4 5;}
+  .node{fill:var(--bg);stroke-width:3;}
+  .node.frontier{stroke-dasharray:3 3;opacity:.85;}
+
+  .flow{display:flex;flex-direction:column;}
+  .stage{min-height:128px;display:flex;flex-direction:column;justify-content:center;padding:8px 0;}
+  .stage h3{font-size:13px;font-weight:700;letter-spacing:.02em;color:var(--c,#111);margin-bottom:5px;}
+  .stage p{font-size:14px;line-height:1.7;color:var(--soft);margin:0;}
+  .stage p a{border:none;color:var(--ink);} .stage p a:hover{color:var(--link);}
+  .stage.frontier .note{color:var(--dim);font-style:italic;}
+
+  .coda{font-size:14px;line-height:1.85;color:var(--soft);font-style:italic;max-width:700px;margin-top:10px;}
+  .foot{margin-top:56px;border-top:1px solid var(--line);padding-top:16px;color:var(--dim);font-size:12px;}
+  .foot a{border:none;color:var(--link);}
+  @media(max-width:700px){ .thesis{grid-template-columns:26px 1fr;gap:16px;} .stage{min-height:112px;} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top">
+    <a class="who" href="index.html">← wisdom-ikezogwo</a>
+    <button class="toggle" id="themeBtn" title="Toggle dark mode" aria-label="Toggle dark mode"><i class="fas fa-moon"></i></button>
+  </div>
+
+  <h1>Research Vision</h1>
+  <p class="intro">My research asks what it would take to build intelligence trustworthy enough to act in high stakes visual domains, the kind, like medical imaging, where a confident mistake carries real consequences. I work across the layers this demands, perception, grounding, reasoning, and self improvement, and I am actively advancing each. Below is how they connect, and the direction I am reaching toward next.</p>
+
+  <div class="thesis">
+    <div class="spine" aria-hidden="true">
+      <svg viewBox="0 0 40 720" preserveAspectRatio="none" width="40" height="100%">
+        <path class="vessel" d="M20,72 C4,144 36,144 20,216 C4,288 36,288 20,360 C4,432 36,432 20,504"/>
+        <path class="vessel dashed" d="M20,504 C4,576 36,576 20,648"/>
+        <circle class="node" cx="20" cy="72"  r="6" style="stroke:#1772d0"/>
+        <circle class="node" cx="20" cy="216" r="6" style="stroke:#2a9d8f"/>
+        <circle class="node" cx="20" cy="360" r="6" style="stroke:#7048c4"/>
+        <circle class="node" cx="20" cy="504" r="6" style="stroke:#c9791b"/>
+        <circle class="node frontier" cx="20" cy="648" r="6" style="stroke:#c0392b"/>
+      </svg>
+    </div>
+    <div class="flow">
+      <div class="stage" style="--c:#1772d0"><h3>Perception</h3><p>Teaching models to perceive complex visual domains at scale, and measuring honestly what they still cannot see. <a href="https://arxiv.org/abs/2306.11207">Quilt-1M</a>, <a href="https://arxiv.org/abs/2501.04184">MedicalNarratives</a>, <a href="https://arxiv.org/abs/2508.02951">MedBLINK</a>, <a href="https://journals.sagepub.com/home/cix">MsCAMIL</a>.</p></div>
+      <div class="stage" style="--c:#2a9d8f"><h3>Grounding</h3><p>Binding language to precise regions in space and time, the bridge from seeing to locating. <a href="https://arxiv.org/abs/2312.04746">Quilt-LLaVA</a>, <a href="https://arxiv.org/abs/2602.23543">SVG2</a>.</p></div>
+      <div class="stage" style="--c:#7048c4"><h3>Reasoning &amp; Agents</h3><p>Composing perception and grounding into explainable, iterative decision policies that can rival experts. <a href="https://arxiv.org/abs/2502.08916">PathFinder</a>.</p></div>
+      <div class="stage" style="--c:#c9791b"><h3>Self-Improvement through Reinforcement</h3><p>Learning rewards where no ground truth reference exists, so systems can improve on open ended tasks. <a href="https://arxiv.org/abs/2603.05659">When Rubrics Fail</a>.</p></div>
+      <div class="stage frontier" style="--c:#c0392b"><h3>Physics &amp; Embodiment</h3><p>The frontier I am most drawn to: estimating the physical properties of soft, deformable tissue from observation, so a system can predict how it will move and respond. That capability is the missing piece for machines that assist in delicate physical tasks, surgery among them, and it is where I want to take this stack next.</p></div>
+    </div>
+  </div>
+
+  <p class="coda">A robot is, in principle, an ideal surgeon: deterministic, repeatable, precise to the smallest increment of motion. What it lacks is intelligence dexterous enough for the physics of living tissue. Closing that gap means reasoning that runs from a tissue's physical behavior up to the image and back down to safe action.</p>
+
+  <div class="foot">© 2026 Wisdom O. Ikezogwo · <a href="index.html">home →</a></div>
+
+</div>
+
+<script>
+  (function(){
+    var root=document.documentElement, btn=document.getElementById('themeBtn');
+    var saved=localStorage.getItem('theme');
+    if(saved==='dark'||(!saved&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)) root.classList.add('dark');
+    function sync(){ btn.innerHTML=root.classList.contains('dark')?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>'; }
+    sync();
+    btn.addEventListener('click',function(){ root.classList.toggle('dark'); localStorage.setItem('theme',root.classList.contains('dark')?'dark':'light'); sync(); });
+  })();
+</script>
+</body>
+</html>
