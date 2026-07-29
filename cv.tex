@@ -1,248 +1,241 @@
-\documentclass[margin,line]{res}
+\documentclass[10pt,letterpaper]{article}
 
-\usepackage{hyperref}
+\usepackage[left=0.6in,right=0.6in,top=0.55in,bottom=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage{etaremune}
+\usepackage{fontawesome5}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{multicol}
+\usepackage[hidelinks]{hyperref}
 
-\oddsidemargin -.5in
-\evensidemargin -.5in
-\textwidth=6.0in
-\itemsep=0in
-\parsep=0in
-% if using pdflatex:
-%\setlength{\pdfpagewidth}{\paperwidth}
-%\setlength{\pdfpageheight}{\paperheight}
+\definecolor{linkc}{HTML}{1F3C88}   % deep blue for titles/links
+\definecolor{oralred}{HTML}{C0392B} % red for oral / award marks
+\hypersetup{colorlinks=true, urlcolor=linkc, linkcolor=linkc}
 
-\newenvironment{list1}{
-  \begin{list}{\ding{}}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-      \setlength{\leftmargin}{0.17in}}}{\end{list}}
-\newenvironment{list2}{
-  \begin{list}{$\bullet$}{%
-      \setlength{\itemsep}{0in}
-      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
-      \setlength{\topsep}{0in} \setlength{\partopsep}{0in}
-      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
 
+% ----- ruled section header: TITLE ------------------------------------
+\newcommand{\cvsec}[1]{%
+  \vspace{3.2mm}%
+  {\large\scshape\bfseries #1}\,\hrulefill\par
+  \vspace{1.6mm}%
+}
 
+% ----- experience / education entry -----------------------------------
+% #1 org  #2 dates  #3 role/subtitle
+\newcommand{\entry}[3]{%
+  \textbf{#1}\hfill\textit{#2}\par
+  \textit{#3}\par
+}
+
+% ----- publication list styling ---------------------------------------
+\newcommand{\pubspacing}{\setlength{\leftmargin}{2.1em}\setlength{\itemsep}{5pt}\setlength{\topsep}{3pt}\setlength{\parsep}{0pt}}
+\newcommand{\ptitle}[2]{{\bfseries\color{linkc}\href{#1}{#2}}}      % linked bold title
+\newcommand{\me}{\textbf{Wisdom O. Ikezogwo}}
+\newcommand{\venue}[1]{\textit{#1}}
+\newcommand{\oral}{{\color{oralred}\faAward~\textbf{Oral}}}
 
 \begin{document}
 
-\name{Wisdom Oluchi Ikezogwo \vspace*{.1in}}
+% ===================== HEADER =====================
+\begin{minipage}[t]{0.62\textwidth}
+  {\Huge\bfseries Wisdom Oluchi Ikezogwo}\\[2.2mm]
+  Paul G. Allen School of\\
+  Computer Science \& Engineering\\
+  University of Washington, Seattle
+\end{minipage}\hfill
+\begin{minipage}[t]{0.36\textwidth}
+  \raggedleft
+  \faEnvelope[regular]~\href{mailto:wisdomik@cs.washington.edu}{wisdomik@cs.washington.edu}\\
+  \faGraduationCap~\href{https://scholar.google.com/citations?user=gt5I_iYAAAAJ&hl=en}{Google Scholar}\\
+  \faGithub~\href{https://github.com/wisdomikezogwo}{wisdomikezogwo}\\
+  \faGlobe~\href{https://wisdomikezogwo.github.io}{wisdomikezogwo.github.io}
+\end{minipage}
+
+% ===================== RESEARCH INTERESTS =====================
+\cvsec{Research Interests}
+\begin{multicols}{2}
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=0pt,parsep=0pt]
+  \item Multimodal representation \& generative modeling
+  \item Visually grounded reasoning \& multi-agent systems
+  \item Reinforcement learning \& reward modeling
+  \item Large-scale data curation \& evaluation
+  \item Physical / embodied AI; AI for science (medical)
+\end{itemize}
+\end{multicols}
+
+% ===================== EDUCATION =====================
+\cvsec{Education}
+\entry{University of Washington, Seattle}{2021 to 2026 (Expected, Fall)}{Ph.D., Paul G. Allen School of Computer Science and Engineering}
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=2pt]
+  \item M.S. in Computer Science \& Engineering, earned en route (2023)
+  \item Advisors: Prof. \href{https://scholar.google.com/citations?user=IcqahyAAAAAJ}{Ranjay Krishna} (RAIVN Lab) and Prof. \href{https://scholar.google.com/citations?user=nBwaXUsAAAAJ}{Linda Shapiro} (GRAIL)
+  \item Committee: Prof. \href{https://scholar.google.com/citations?user=LOV6_WIAAAAJ}{Hannaneh Hajishirzi} and Prof. \href{https://www.me.washington.edu/facultyfinder/john-kramlich}{John Kramlich} (with advisors)
+\end{itemize}
+\vspace{2mm}
+\entry{Obafemi Awolowo University, Ile-Ife, Nigeria}{2013 to 2019}{B.Sc. (with Honors), Electronic \& Electrical Engineering \textnormal{|} GPA 4.73/5.00}
+\begin{itemize}[leftmargin=1.4em,itemsep=1pt,topsep=2pt]
+  \item Dissertation: \href{https://doi.org/10.1016/j.compbiomed.2020.103757}{``Supervised Domain Generalization for Integration of Disparate Scalp EEG Datasets for Automatic Epileptic Seizure Detection''} (Advisor: Prof. \href{https://scholar.google.com/citations?user=aYIMS9gAAAAJ}{Kayode P. Ayodele})
+\end{itemize}
+
+% ===================== PUBLICATIONS =====================
+\cvsec{Publications}
+See \href{https://scholar.google.com/citations?user=gt5I_iYAAAAJ&hl=en}{Google Scholar} for the full, up-to-date list.
+
+\vspace{2mm}
+{\scshape\bfseries Conference Papers}
+\begin{itemize}[leftmargin=2.4em,labelsep=0.4em,itemsep=5pt,topsep=3pt,align=left,label={}]
+  \item[14.] \ptitle{https://arxiv.org/abs/2603.05659}{When Rubrics Fail: Error Enumeration as Reward in Reference-Free RL Post-Training for Virtual Try-On}\\
+  \me, Mehmet S. Seyfioglu, Ranjay Krishna, Karim Bouyarmane.\\
+  \venue{European Conference on Computer Vision (\textbf{ECCV}), 2026.} \oral
+  \item[13.] \ptitle{https://arxiv.org/abs/2602.23543}{Synthetic Visual Genome 2: Extracting Large-scale Spatio-Temporal Scene Graphs from Videos}\\
+  Ziqi Gao, Jieyu Zhang, \me, Jae Sung Park, Tario G. You, Daniel Ogbu, Chenhao Zheng, Weikai Huang, Yinuo Yang, Winson Han, Quan Kong, Rajat Saini, Ranjay Krishna.\\
+  \venue{European Conference on Computer Vision (\textbf{ECCV}), 2026.}
+  \item[12.] \ptitle{https://arxiv.org/abs/2502.08916}{PathFinder: A Multi-Modal Multi-Agent System for Medical Diagnostic Decision-Making Applied to Histopathology}\\
+  \me, Fatemeh Ghezloo, Mehmet S. Seyfioglu, Rustin Soraki, Beibin Li, Tejoram Vivekanandan, Joann G. Elmore, Ranjay Krishna, Linda Shapiro.\\
+  \venue{International Conference on Computer Vision (\textbf{ICCV}), 2025.}
+  \item[11.] \ptitle{https://arxiv.org/abs/2501.04184}{MedicalNarratives: Connecting Medical Vision and Language with Localized Narratives}\\
+  \me, Kevin Zhang, M. S. Seyfioglu, Fatemeh Ghezloo, Ranjay Krishna, Linda Shapiro.\\
+  \venue{Neural Information Processing Systems (\textbf{NeurIPS}), 2025.}
+  \item[10.] \ptitle{https://arxiv.org/abs/2508.02951}{MedBLINK: Probing Basic Perception in Multimodal Language Models for Medicine}\\
+  Mahtab Bigverdi, \me, Kevin Zhang, Hyewon Jeong, Mingyu Lu, Sungjae Cho, Linda Shapiro, Ranjay Krishna.\\
+  \venue{CVAMD Workshop, International Conference on Computer Vision (\textbf{ICCV}), 2025.}
+  \item[9.] \ptitle{https://openaccess.thecvf.com/content/CVPR2024/papers/Seyfioglu_Quilt-LLaVA_Visual_Instruction_Tuning_by_Extracting_Localized_Narratives_from_Open-Source_CVPR_2024_paper.pdf}{Quilt-LLaVA: Visual Instruction Tuning by Extracting Localized Narratives from Open-Source Histopathology Videos}\\
+  Mehmet Saygin Seyfioglu, \me, Fatemeh Ghezloo, Ranjay Krishna, Linda Shapiro.\\
+  \venue{Conference on Computer Vision and Pattern Recognition (\textbf{CVPR}), 2024.}
+  \item[8.] \ptitle{https://arxiv.org/abs/2306.11207}{Quilt-1M: One Million Image-Text Pairs for Histopathology}\\
+  \me, Mehmet S. Seyfioglu, Fatemeh Ghezloo, Dylan Geva, Fatwir S. Mohammed, Pavan K. Anand, Ranjay Krishna, Linda Shapiro.\\
+  \venue{Neural Information Processing Systems (\textbf{NeurIPS}), 2023.} \oral
+  \item[7.] \ptitle{https://arxiv.org/pdf/2209.01534}{Multi-modal Masked Autoencoders Learn Compositional Histopathological Representations}\\
+  \me, M. S. Seyfioglu, Linda Shapiro.\\
+  \venue{Extended Abstract, Machine Learning for Health (\textbf{ML4H}), 2022.}
+\end{itemize}
+
+\vspace{2mm}
+{\scshape\bfseries Journal Publications}
+\begin{itemize}[leftmargin=2.4em,labelsep=0.4em,itemsep=5pt,topsep=3pt,align=left,label={}]
+  \item[6.] \ptitle{https://journals.sagepub.com/home/cix}{Multi-Scale Cross-Attention Multiple Instance Learning Network for Automated Classification of Colorectal Polyps}\\
+  \me, Yongjun Liu, Kareem Hosny, Jonathan Henriksen, Robert W. Ricciotti, Meenal Rawlani, Paul E. Swanson, Patrick C. Mathias, Noah Hoffman, Geoffrey S. Baird, Luis F. Gonzalez-Cuyar, Linda G. Shapiro, Deepti M. Reddi.\\
+  \venue{Cancer Informatics (SAGE), 2026. Presented at USCAP 2025.}
+  \item[5.] \ptitle{https://doi.org/10.1016/j.compbiomed.2020.103757}{Supervised domain generalization for integration of disparate scalp EEG datasets for automatic epileptic seizure detection}\\
+  K. P. Ayodele, \me, M. A. Komolafe, Philip Ogunbona.\\
+  \venue{Computers in Biology and Medicine 120: 103757, 2020.}
+  \item[4.] \ptitle{https://doi.org/10.3991/ijoe.v16i15.16663}{Empirical Characterization of the Temporal Dynamics of EEG Spectral Components}\\
+  K. P. Ayodele, \me, A. A. Osuntuyi.\\
+  \venue{International Journal of Online and Biomedical Engineering (iJOE), 2020.}
+\end{itemize}
+
+\vspace{2mm}
+{\scshape\bfseries Workshops, Abstracts \& Reports}
+\begin{itemize}[leftmargin=2.4em,labelsep=0.4em,itemsep=5pt,topsep=3pt,align=left,label={}]
+  \item[3.] \ptitle{https://www.laboratoryinvestigation.org/article/S0023-6837(24)02407-3/fulltext}{Comparative Performance of Multi-Scale Cross-Attention Multiple Instance Learning (MsCAMIL) and Pathology Trainees in Colorectal Polyp Diagnosis}\\
+  \me, Sasha M. Ortiz, Yongjun Liu, Jamie Garrett, Carol Rizkalla, Lindsey K. Durowoju, Ritika Walia, Jonathan Henriksen, Luis F. Gonzalez-Cuyar, Deepti M. Reddi.\\
+  \venue{USCAP, 2025.}
+  \item[2.] {\bfseries\color{linkc} Risk Stratification of Solitary Fibrous Tumor Using Whole Slide Image Analysis with a Convolutional Neural Network}\\
+  \me, C. Chandler, J. S. Gandhi, A. Garcia, C. Daum, E. Loggers, J. G. Mantilla, A. Bandhlish, R. W. Ricciotti.\\
+  \venue{Laboratory Investigation (Elsevier), Vol. 103, 2023. USCAP.}
+  \item[1.] \ptitle{https://zenodo.org/records/7951122}{Recent Advances, Applications and Open Challenges in Machine Learning for Health: Reflections from Research Roundtables at ML4H 2022 Symposium}\\
+  Stefan Hegselmann, Helen Zhou, \dots, \me, et al.\\
+  \venue{ML4H 2022 Symposium.}
+\end{itemize}
+
+\vspace{2mm}
+{\scshape\bfseries In Preparation}
+\begin{itemize}[leftmargin=1.6em,itemsep=4pt,topsep=3pt,label={}]
+  \item \textbf{MolmoHealth: Grounded Medical Vision-Language Models.}\\
+  \me, James Park, Kevin Zhang, Kevin Xiao, Omar Abdel-Aziz, Jason Ren, Ranjay Krishna, Rory Donovan-Maiye, Allyson Ettinger, Chris Clark.
+  \item \textbf{VirtualVLA: Toward Cross-Embodiment Generalization of Robotic Policies.}\\
+  Xiang Fan, \me, Jason Ren, Ainaz Eftekhar, Jiafei Duan, Ranjay Krishna.
+  \item \textbf{HealthInsight: Predicting Novel Biomarkers Conditioned on Prior Literature.}\\
+  \me, Kevin Zhang, Isha Jagadish, Linda Shapiro, Ranjay Krishna.
+  \item \textbf{SurgicalPhysics: Estimating the Physical Properties of Biological Tissue from Video Observations and 3D Scans.}\\
+  \me, Linda Shapiro, Ranjay Krishna.
+\end{itemize}
+
+% ===================== EXPERIENCE =====================
+\cvsec{Experience}
+\entry{University of Washington \textnormal{(RAIVN Lab, GRAIL)}}{September 2021 to Present}{Research Assistant}
+Advisors: Prof. \href{https://scholar.google.com/citations?user=IcqahyAAAAAJ}{Ranjay Krishna}, Prof. \href{https://scholar.google.com/citations?user=nBwaXUsAAAAJ}{Linda Shapiro}.
+\begin{itemize}[leftmargin=1.4em,itemsep=2pt,topsep=2pt]
+  \item Built large-scale medical vision-language datasets: \textbf{Quilt-1M} (one million image-text pairs from expert YouTube narration, roughly 5x prior comprehensive datasets; NeurIPS Oral) and \textbf{MedicalNarratives} (4.7M pairs, dense spatial grounding, 12 medical domains).
+  \item Built \textbf{PathFinder}, the first multi-agent system to exceed average pathologist performance on melanoma (+9\%), and \textbf{MedBLINK}, showing top medical MLMs reach 65\% where humans reach 96\%.
+  \item Current work: generalizable medical visual grounding, agentic biomarker discovery, soft-tissue physics estimation from observation, and cross-embodiment generalization of robot policies.
+\end{itemize}
+\vspace{1.5mm}
+\entry{Allen Institute for Artificial Intelligence (AI2)}{February 2026 to Present}{Student Researcher, OE-Science Team}
+Generalizable medical visual grounding and agentic systems for biomedical imaging.\par
+\vspace{1.5mm}
+\entry{Amazon}{May to November 2025}{Ph.D. Research Intern}
+Advisors: \href{https://scholar.google.com/citations?user=VWiPgZQAAAAJ}{Karim Bouyarmane}, \href{https://scholar.google.com/citations?user=65TuoYUAAAAJ}{Mehmet Saygin Seyfioglu}.\\
+Reward modeling and reference-free RL post-training of generative models for image editing (virtual try-on); resulted in an ECCV 2026 Oral.\par
+\vspace{1.5mm}
+\entry{Apple}{April to September 2024}{AIML Research Intern}
+Advisors: \href{https://scholar.google.com/citations?user=F5Z9kN4AAAAJ&hl=en}{Rick Chang}, \href{https://scholar.google.com/citations?user=vqHIt_sAAAAJ}{Chun-Liang Li}, \href{https://scholar.google.com/citations?user=dhQUwOAAAAAJ}{Karren Yang}.\\
+Developed \textbf{Perceive and Predict}, modality- and time-aware egocentric efficient multimodal representations: predictive coding across co-occurring modalities (video, text, audio, IMU, hands) to reconstruct expensive missing modalities.\par
+\vspace{1.5mm}
+\entry{Mayo Clinic}{June 2023 to May 2024}{Graduate Research Intern}
+Advisors: \href{https://scholar.google.com/citations?user=4irpbaYAAAAJ&hl=en}{Chen Wang}, \href{https://www.linkedin.com/in/nicholaschenai/}{Nicholas Chen}.\\
+A foundation model for histopathology trained on millions of gigapixel histology images, scaled on the Argonne National Lab cluster and clinically evaluated.\par
+
+% ===================== HONORS & AWARDS =====================
+\cvsec{Honors \& Awards}
+\begin{itemize}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt]
+  \item Oral presentations at \textbf{NeurIPS 2023} (Quilt-1M) and \textbf{ECCV 2026} (When Rubrics Fail) \hfill 2023, 2026
+  \item {\color{oralred}\faAward}~ICML Gold Reviewer (top reviewer recognition) \hfill 2025
+  \item UW Population Health Initiative, AI Pilot Research Grant Award \hfill 2024
+  \item Microsoft Accelerate Foundation Models Research Grant \hfill 2023
+  \item IBRO-Simons Computational Neuroscience Summer School travel grant, Cape Town \hfill 2020
+  \item Prof. Kehinde Prize, Best Graduating Student in Control, OAU \hfill 2019
+  \item Oyebolu Prize, Best Male Graduating Student, OAU \hfill 2019
+  \item Federal Government of Nigeria Scholarship Award \hfill 2017 to 2019
+  \item Total/NNPC National Merit Scholarship \hfill 2016 to 2019
+  \item Etisalat Nigeria Merit Scholarship \hfill 2015
+\end{itemize}
+
+% ===================== INVITED TALKS =====================
+\cvsec{Invited Talks}
+\begin{itemize}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt]
+  \item \href{https://youtu.be/FiCr2yUafPE}{Cohere For AI} \hfill Dec 2025
+  \item UW GRAIL Seminar (Quilt-1M, Quilt-LLaVA, PathFinder) \hfill 2023 to 2025
+  \item \href{https://www.pathai.com/}{PathAI} \hfill Dec 2023
+  \item \href{https://openreview.net/forum?id=OL2JQoO0kq}{NeurIPS (Oral)} \hfill 2023
+  \item Seattle Central College, STEM-B Blacks in Tech \hfill June 2023
+  \item \href{https://dynamicsai.org/seminars/page-17/}{AI Institute in Dynamic Systems, CTF Workshop} \hfill Feb 2023
+\end{itemize}
+
+% ===================== MENTORING =====================
+\cvsec{Mentoring}
+Students I have mentored (project $\rightarrow$ next placement):
+\begin{itemize}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt]
+  \item \href{https://scholar.google.com/citations?user=PxzAnMIAAAAJ}{Kevin Zhang} (MedicalNarratives, MedBLINK, MolmoHealth) $\rightarrow$ starting MD, Harvard Medical School, Fall 2026
+  \item \href{https://xckev.github.io/}{Kevin Xiao} (MolmoHealth) $\rightarrow$ incoming Intern, OpenAI
+  \item \href{https://www.linkedin.com/in/abdel-aziz-omar/}{Omar Abdel-Aziz} (MolmoHealth) $\rightarrow$ UW; research at Fred Hutch
+  \item \href{https://www.linkedin.com/in/isha-jagadish-01782b219/}{Isha Jagadish} (HealthInsight) $\rightarrow$ UW, CS
+  \item \href{https://www.linkedin.com/in/pka2000}{Pavan K. Anand} (Quilt-1M) $\rightarrow$ Applied Scientist, Microsoft
+  \item \href{https://scholar.google.com/citations?user=m6FrYWwAAAAJ}{Fatwir S. Mohammed} (Quilt-1M) $\rightarrow$ Data Scientist, Allen Institute for Cell Science
+  \item \href{https://www.linkedin.com/in/tario-you/}{Tario G. You} (Synthetic Visual Genome 2) $\rightarrow$ Co-founder, OpenTrade (YC S26)
+  \item Dylan Geva (Quilt-1M) $\rightarrow$ University of Washington
+\end{itemize}
+
+% ===================== TEACHING =====================
+\cvsec{Teaching}
+\begin{itemize}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt]
+  \item CSE 493G1/599G1: Deep Learning for Computer Vision \hfill Spring 2026 (TA)
+  \item CSE 576: Computer Vision \hfill Spring 2026 (Guest Lecturer)
+  \item E E 562: Artificial Intelligence for Engineers \hfill Winter 2026 (Guest Lecturer)
+  \item CSE 455: Computer Vision \hfill Autumn 2025 (TA)
+  \item CSE 473: Introduction to Artificial Intelligence \hfill Spring 2023, Fall 2023 (TA)
+  \item CSE 160: Data Programming \hfill Fall 2021, Winter 2022, Fall 2022 (TA)
+\end{itemize}
+
+% ===================== SERVICE =====================
+\cvsec{Service}
+\begin{itemize}[leftmargin=1.4em,itemsep=1.5pt,topsep=2pt]
+  \item \textbf{Reviewing:} NeurIPS (2023 to 2025), CVPR (2024 to 2026), ICCV / ECCV (2025 to 2026), ICML 2025 (\textbf{Gold Reviewer}), IEEE Transactions on Medical Imaging (TMI).
+  \item \textbf{Workshop Organizing:} \href{https://evgenfm2026.github.io/}{EvGenFM 2026}, 2nd Workshop on the Evaluation of Generative Foundation Models, at CVPR 2026.
+  \item \textbf{Junior Chair:} \href{http://ml4h.cc/2022/research_roundtables.html}{ML4H 2022 Research Roundtables}.
+  \item \textbf{Mentoring:} UW CSE Pre-Application Mentorship Service (PAMS).
+\end{itemize}
 
-\begin{resume}
-\vspace{-.1in}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\sc Contact}
-
-  +(1) 206-532-9139 |
- \href{mailto:wisdomik@cs.washington.edu}{wisdomik@cs.washington.edu} |
-\href{https://wisdomikezogwo.github.io}{wisdomikezogwo.github.io}\\
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\vspace{-.15in}
-
-\section{\sc Research Interests}
-I build toward \textit{autonomous medical intelligence} --- systems that perceive the body across imaging scales, ground what they see, reason like experts, and improve through interaction, toward the physical dexterity needed for surgical manipulation of soft tissue. Concretely: Multimodal Representation \& Generative Modeling, Multi-Agent Reasoning, Reinforcement Learning \& Reward Modeling, Data Curation, Physical/Embodied AI, and AI for Science (Medical).
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{\sc Education}
-{\bf University of Washington}, Seattle, USA \hfill 2021-2026 (Expected, Fall)\\
-%{\em Department of Statistics}
-\vspace*{-.1in}
-\begin{list1}
-\item[]{\bf Ph.D. Paul G. Allen School of Computer Science and Engineering. | GPA 3.87}
-\begin{list2}
-\vspace*{.05in}
-\item Advisors: Prof. Ranjay Krishna and Prof. Linda Shapiro
-\end{list2}
-\vspace*{.05in}
-\end{list1}
-
-{\bf Obafemi Awolowo University}, Ile-Ife, Nigeria \hfill 2013-2019\\
-%{\em Department of Statistics}
-\vspace*{-.1in}
-\begin{list1}
-\item[]{\bf B.Sc. Electronic \& Electrical Engr. | GPA 4.73/5.00 | Class rank 2/120.}
-\begin{list2}
-\vspace*{.05in}
-\item Dissertation Topic:  ``Development of an application for combining disparate EEG seizure datasets into a single dataset" | Supervisor: Dr.  Kayode P. Ayodele
-\end{list2}
-\vspace*{.05in}
-\end{list1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\sc Academic Experience}
-{\bf University of Washington}, Seattle, USA.
-
-\vspace{-.3cm}
-\textbf{\textit{Research Assistant}}{\em |Graphics and Imaging Laboratory (GRAIL)} \hfill { September, 2021 - Present}\\
-\vspace{-.3cm}
-\begin{list2}
-\item Led research on Multimodal LLMs for medical imaging: built medical multimodal datasets (Quilt-1M and MedNarratives), developed state-of-the-art models for analysis (QuiltNet, Quilt-LLaVA), and created a multi-agent AI framework for clinical diagnosis outperforming human experts (PathFinder), and better benchmarks (MedBlink). \\
-\item Leading efforts on generalizable medical visual grounding (MolmoHealth), agentic medical-imaging based biomarker discovery, estimating physical properties of soft body tissue/organs from observation, and cross-embodiment generalization of robot policies and world models.
-\end{list2}
-
-%\vspace{-.1cm}
-%\textbf{\textit{Student Researcher}}{\em |AI2 PRIOR Team} \hfill { February, 2026 - Present}\\
-%Working on generalizable medical visual grounding and agentic systems for biomedical imaging.
-
-%\vspace{-.1cm}
-\textbf{\textit{Teaching Assistant / Guest Lecturer}} \hfill {September 2021 - Present}\\
-\vspace*{-2.5mm}
-\begin{list2}
-\item CSE 493G1/599G1: Deep Learning for Computer Vision | Spring 2026
-\item CSE 576: Computer Vision | Spring 2026 (Guest Lecturer)
-\item E E 562: Artificial Intelligence For Engineers | Winter 2026 (Guest Lecturer)
-\item CSE 455: Computer Vision | Autumn 2025
-\item CSE 473: Introduction to Artificial Intelligence | Spring 2023, Fall 2023 \& Winter 2024
-\item CSE 160: Data Programming | Fall 2021 \& Winter 2022 \& Fall 2022
-\end{list2}
-
-%%%%%%%%%%%%%%%%%
-{\bf Obafemi Awolowo University}, Ile-Ife, Osun Nigeria.
-
-\vspace{-.3cm}
-\textbf{\textit{UG. Research Asst.}}{\em |Biosignal Proc., Inst. \& Control Lab} \hfill { March, 2017 - September 2021}\\
-%\vspace{-.3cm}
-Worked on integrating disparate multivariate time series data by characterizing spectral components for dynamical dimensionality reduction, trained neural networks for classification of brain EEG signals, and characterization of EEG spectral components.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\section{\sc Industry Experience}
-
-\href{https://prior.allenai.org}{\bf AI2 }, Seattle, WA, USA.\\
-\vspace*{-0.1mm}
-{\em Student Researcher (OE/Science Team)} \hfill {February, 2026 - Present}\\
-Working on generalizable medical visual grounding and agentic systems for biomedical imaging.
-
-
-\href{https://www.amazon.com}{\bf Amazon}, Seattle, WA, USA.\\
-\vspace*{-0.1mm}
-{\em Ph.D. Research Internship} \hfill {May - November 2025}\\
-Research on reward modeling and post-training of generative models in reference-free settings with reinforcement learning applied to image-editing task of virtual try-on.
-
-\href{https://machinelearning.apple.com/}{\bf Apple}, Cupertino, CA, USA.\\
-\vspace*{-0.1mm}
-{\em AIML Research Internship} \hfill {April - September 2024}\\
-Led research on efficient multimodal representations for Egocentric data including video, text, audio, IMU, and hands. Developed Perceive-Predict, leveraging predictive coding between co-occurring modalities to reconstruct missing modalities, reducing the capture cost of expensive modalities like video.
-
-\href{https://www.mayoclinic.org}{\bf Mayo Clinic}, Rochester, MN, USA.\\
-\vspace*{-0.1mm}
-{\em Graduate Research Internship} \hfill {June, 2023 - May 2024}\\
-    Led research toward developing a foundational model for histopathology. Trained on millions of giga-pixel-sized histology images, and scaled-up compute on the Argonne National Lab computing cluster and clinically evaluated models.
-
-%\href{https://okra.ng}{\bf Okra, Inc.}, Lagos, Nigeria.\\
-%\vspace*{-0.1mm}
-%{\em ML Engineer} \hfill {October, 2020 - September 2021}\\
-%    Worked on models for customer financial information from unstructured banking data, and extracted key customer earning and spending data to feed into downstream lending including predicting income, spending patterns, and reconciliations.
-
-%\href{https://bloverse.com}{\bf Demz Analytics Limited}, Lagos, Nigeria.\\
-%\vspace*{-0.1mm}
-%{\em Data Scientist / ML Engineer} \hfill {October, 2019 - October 2020}\\
-%    Developed production recommendation systems using attention and epsilon-greedy bandit strategy.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\sc In Preparation}
-\textbf{Wisdom O. Ikezogwo}, James Park, Kevin Zhang, Kevin Xiao, Omar Abdel-Aziz, Jason Ren, Ranjay Krishna, Rory Donovan-Maiye, Allyson Ettinger, Chris Clark. ``MolmoHealth: Grounded Medical Vision-Language Models'' (Target: Nature Medicine)
-
-Xiang Fan, \textbf{Wisdom O. Ikezogwo}, Jason Ren, Ainaz Eftekhar, Jiafei Duan, Ranjay Krishna. ``VirtualVLA: Toward Cross-Embodiment Generalization of Robotic Policies'' (Target: AAAI)
-
-\textbf{Wisdom O. Ikezogwo}, Kevin Zhang, Isha Jagadish, Ranjay Krishna,. ``HealthInsight: Predicting Novel Biomarkers Conditioned on Prior Literature''
-
-\textbf{Wisdom O. Ikezogwo}, Xiang Fan, Ranjay Krishna. ``SurgicalPhysics: Estimating the Physical Properties of Biological Tissue from Video Observations Via 3D Scans''
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\sc Conference Papers}
-\href{https://scholar.google.com/citations?user=gt5I_iYAAAAJ&hl=en}{Google Scholar}
-
-\href{https://arxiv.org/abs/2602.23543}{Ziqi Gao, Jieyu Zhang, \textbf{Wisdom O. Ikezogwo}, Jae Sung Park, Tario G. You, Daniel Ogbu, Chenhao Zheng, Weikai Huang, Yinuo Yang, Winson Han, Quan Kong, Rajat Saini, Ranjay Krishna. ``Synthetic Visual Genome 2: Extracting Large-scale Spatio-Temporal Scene Graphs from Videos.'' ECCV 2026 (Springer).}
-
-\href{https://arxiv.org/abs/2603.05659}{\textbf{Wisdom O. Ikezogwo}, Mehmet S.~Seyfioglu, Ranjay Krishna, Karim Bouyarmane. ``When Rubrics Fail: Error Enumeration as Reward in Reference-Free RL Post-Training for Virtual Try-On.'' ECCV 2026 (Springer) [ORAL].}
-
-\href{https://arxiv.org/abs/2502.08916}{\textbf{Wisdom O. Ikezogwo}, Fatemeh Ghezloo, Mehmet S.~Seyfioglu, Rustin Soraki, Beibin Li, Tejoram Vivekanandan, Joann G. Elmore, Ranjay Krishna, Linda Shapiro. ``PathFinder: A Multi-Modal Multi-Agent System for Medical Diagnostic Decision-Making Applied to Histopathology.'' ICCV 2025.}
-
-\href{https://arxiv.org/abs/2501.04184}{\textbf{Wisdom O. Ikezogwo}, Kevin Zhang, M. S. Seyfioglu, Fatemeh Ghezloo, Ranjay Krishna, Linda Shapiro. ``MedicalNarratives: Connecting Medical Vision and Language with Localized Narratives.'' NeurIPS 2025.}
-
-\href{https://arxiv.org/abs/2508.02951}{Mahtab Bigverdi, \textbf{Wisdom O. Ikezogwo}, Kevin Zhang, Hyewon Jeong, Mingyu Lu, Sungjae Cho, Linda Shapiro, Ranjay Krishna. ``MedBLINK: Probing Basic Perception in Multimodal Language Models for Medicine.'' CVAMD Workshop, ICCV 2025.}
-
-\href{https://openaccess.thecvf.com/content/CVPR2024/papers/Seyfioglu_Quilt-LLaVA_Visual_Instruction_Tuning_by_Extracting_Localized_Narratives_from_Open-Source_CVPR_2024_paper.pdf}{Seyfioglu, Mehmet Saygin, \textbf{Wisdom O. Ikezogwo}, Fatemeh Ghezloo, Ranjay Krishna, and Linda Shapiro. "Quilt-LLaVA: Visual Instruction Tuning by Extracting Localized Narratives from Open-Source Histopathology Videos." CVPR 2024.}
-
-
-\href{https://arxiv.org/abs/2306.11207}{\textbf{Wisdom O. Ikezogwo}, Mehmet S.~Seyfioglu, Fatemeh Ghezloo, Dylan Geva, Fatwir S.~Mohammed, Pavan K.~Anand, Ranjay Krishna, Linda Shapiro. ``Quilt-1M: One Million Image-Text Pairs for Histopathology.''. NeurIPS 2023 [ORAL]}
-
-\href{https://arxiv.org/pdf/2209.01534}{\textbf{Wisdom O. Ikezogwo}, M. S. Seyfioglu, Linda Shapiro. ``Multi-modal Masked Autoencoders Learn Compositional Histopathological Representations.'' Extended Abstract: \textit{Machine Learning for Health (ML4H) 2022.}}
-
-\textbf{Wisdom O. Ikezogwo}, C. Chandler, J. S. Gandhi, A. Garcia, C. Daum, E. Loggers, J. G. Mantilla, A. Bandhlish, R. W. Ricciotti. ``Risk Stratification of Solitary Fibrous Tumor Using Whole Slide Image Analysis.'' LABORATORY INVESTIGATION, Vol. 103. ELSEVIER SCIENCE INC, 2023.
-
-\href{https://www.researchgate.net/profile/Megan-Coffee/publication/371119938_ML4H_2022_Research_Roundtables-1/links/64737a306fb1d1682b165829/ML4H-2022-Research-Roundtables-1.pdf}{Stefan Hegselmann, Helen Zhou, Yuyin Zhou, Jennifer Chien, Sujay Nagaraj, Neha Hulkund, Shreyas Bhave, Michael Oberst, Amruta Pai, Caleb Ellington, \textbf{Wisdom O. Ikezogwo}, et. al. ``Recent Advances, Applications and Open Challenges in Machine Learning for Health: Reflections from Research Roundtables'' at ML4H 2022 Symposium}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\sc Journal Publications}
-
-\textbf{Wisdom O. Ikezogwo}, Yongjun Liu, Kareem Hosny, Jonathan Henriksen, Robert W Ricciotti, Meenal Rawlani, Paul E Swanson, Patrick C. Mathias, Noah Hoffman, Geoffrey S Baird, Luis F Gonzalez-Cuyar, Linda G Shapiro, Deepti M Reddi. ``Multi-Scale Cross-Attention Multiple Instance Learning Network for Automated Classification of Colorectal Polyps.'' \textit{Cancer Informatics} (SAGE), 2026.
-
-\textbf{Wisdom O. Ikezogwo}, Yongjun Liu, Kareem Hosny, Jonathan Henriksen, Robert W Ricciotti, Meenal Rawlani, Paul E Swanson, Patrick C. Mathias, Noah Hoffman, Geoffrey S Baird, Luis F Gonzalez-Cuyar, Linda G Shapiro, Deepti M Reddi.
-``Multi-Scale Cross-Attention Multiple Instance Learning (MsCAMIL) Network for Automated Triage of Colorectal Polyps.'' United States and Canadian Academy of Pathology's (USCAP) 114th Annual Meeting, March 22-27, 2025.
-
-\textbf{Wisdom O. Ikezogwo}, Sasha M Ortiz, Yongjun Liu, Jamie Garrett, Carol Rizkalla, Lindsey K Durowoju, Ritika Walia, Jonathan Henriksen, Luis F Gonzalez-Cuyar, Deepti M Reddi. ``Comparative Performance of Multi-Scale Cross-Attention Multiple Instance Learning (MsCAMIL) and Pathology Trainees in Colorectal Polyp Diagnosis.'' , United States and Canadian Academy of Pathology's (USCAP) 114th Annual Meeting, March 22-27, 2025.
-
-\href{https://doi.org/10.1016/j.compbiomed.2020.103757}{K. P. Ayodele, \textbf{Wisdom O. Ikezogwo}, M. A. Komolafe, and Philip Ogunbona. 2020. "Supervised domain generalization for integration of disparate scalp EEG datasets for automatic epileptic seizure detection." \textit{Computers in Biology and Medicine} 120: 103757.}
-
-\href{https://doi.org/10.3991/ijoe.v16i15.16663}{K. P. Ayodele, \textbf{Wisdom O. Ikezogwo}, and A. A. Osuntuyi. 2020. "Empirical Characterization of the Temporal Dynamics of EEG Spectral Components." \textit{ International Journal of Online and Biomedical Engineering (IJOE)}.}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\sc Presentations}
-\href{https://youtu.be/FiCr2yUafPE}{Invited talk at Cohere For AI}   \hfill Dec, 2025 \\
-\href{https://openreview.net/forum?id=OL2JQoO0kq}{[ORAL] Presentation --- NeurIPS}    \hfill  2023 \\
-\href{https://www.pathai.com/}{Invited talk at PathAI}    \hfill  Dec, 2023 \\
-Seattle Central College Stem-B Blacks in Tech     \hfill  June, 2023 \\
-\href{https://dynamicsai.org/seminars/page-17/}{AI Institute in Dynamic Systems CTF Workshop}      \hfill  February, 2023 \\
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\sc Service}
-{\bf Workshop Organizing:} \href{https://evgenfm2026.github.io/}{EvGenFM 2026} --- 2nd Workshop on the Evaluation of Generative Foundation Models, at CVPR 2026 \\
-{\bf Reviewing:} CVPR 2026, ECCV 2026, ICML 2026, NeurIPS 2025, ICCV 2025, IEEE Transactions on Medical Imaging (TMI) \\
-{\bf Mentoring:} UW CSE Pre-Application Mentorship Service (PAMS); Mentoring research students now at UW.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{\sc Honors and Awards}
-Population Health Initiative | AI Pilot Research Grant Award | value:  \$100,000 \hfill 2024
-\vspace*{-2.5mm}
-
-Microsoft's Accelerate Foundation Models Research Grant | value:  \$20,000 \hfill 2023
-
-\vspace*{-2.5mm}
-IBRO-Simons Computational Neuroscience Summer School travel grant, Cape Town. \hfill 2020
-
-\vspace*{-2.5mm}
-Prof. Kehinde prize for the Best Graduating Student in the Control option, OAU, Nigeria. \hfill 2019
-
-\vspace*{-2.5mm}
-Oyebolu Prize for Best Male Graduating Student, OAU, Nigeria. \hfill 2019
-
-\vspace*{-2.5mm}
-Federal Government Scholarship Award, Nigeria.  | cumm. value:  \$1500 \hfill 2017-2019
-
-\vspace*{-2.5mm}
-Total/NNPC National Merit Scholarship.  |  cumm. value:  \$1500 \hfill 2016-2019
-
-\vspace*{-2.5mm}
-Etisalat Nigeria Merit Scholarship.  |  value:  \$250 \hfill 2015
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{resume}
 \end{document}
