@@ -179,7 +179,7 @@ const PAPERS = {
   "rubrics": {
     title: "When Rubrics Fail: Error Enumeration as Reward in Reference-Free RL Post-Training for Virtual Try-On",
     authors: `<b>${ME}</b>, Mehmet Saygin Seyfioglu, Ranjay Krishna, Karim Bouyarmane`,
-    venue: "ECCV 2026", award: "Oral", year: 2026,
+    venue: "ECCV 2026", award: "Spotlight", year: 2026,
     rung: "rl",
     tagline: "How do you reward a generative model when there is no single right answer? Stop scoring against an ideal — start counting what's wrong.",
     teaser: "images/iec.png",
