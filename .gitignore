@@ -11,3 +11,5 @@ res.cls
 # private documents: keep local, never serve (only the CV in data/ is public)
 data/*
 !data/academic_cv.pdf
+!data/research_statement.pdf
+!data/teaching_statement.pdf
