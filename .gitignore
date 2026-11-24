@@ -13,3 +13,4 @@ data/*
 !data/academic_cv.pdf
 !data/research_statement.pdf
 !data/teaching_statement.pdf
+!data/letter_deadlines.pdf
